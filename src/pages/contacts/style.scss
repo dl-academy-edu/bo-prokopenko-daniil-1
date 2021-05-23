@@ -1,0 +1,36 @@
+.contacts {
+    margin-top: 29px; 
+}
+
+.contacts-title {
+    word-spacing: 12px;
+}
+
+.contacts-support-wrapper {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+}
+
+/* support */
+
+.support {
+    padding: 0 0 0 20px;
+    width: 380px;
+    min-width: 300px;    
+}
+
+.support p {
+    margin: 0 0 20px;
+}
+
+.support-statement {
+    font-family: "Montserrat", Arial, sans-serif;;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #C29974;
+}

@@ -1,0 +1,46 @@
+.blogs {
+    margin-bottom: 32px;
+}
+
+.container-blogs {
+    max-width: 1200px;
+}
+
+.blogs-title {
+    margin-top: 29px;
+    margin-bottom: 30px;
+}
+  
+.blogs-list {
+    display: flex;
+    flex-wrap: wrap;     
+    padding: 0;
+}
+
+.blogs-items {
+    margin: 18px 10px 15px;
+    display: block;
+    width: 380px;
+}
+
+.blogs-image {
+    display: block;
+}
+
+.blogs-date {
+    padding: 20px 0 8px;
+    margin: 0;
+    color: #818181;
+}
+
+.blogs-text {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 15px 0 0;
+    margin: 0;
+}
+
+.blog-item-link:hover h6,
+.blog-item-link:active h6 {
+    text-decoration: underline;
+}
