@@ -1,24 +1,85 @@
-header {
-  background-color: #89f7fe;
-  height: 80px;
+/* header */
+
+.header {
+  padding: 35px 0;
   display: flex;
   align-items: center;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
 
-  span {
-    padding-right: 20px;
-  }
+.header-logo {
+  margin-right: 40px;
+}
 
-  a {
-    color: #000;
-    text-decoration: none;
+.header-logo img {
+  display: block;
+}
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.header-nav {
+  margin: 0 auto 0 20px;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-item {
+ margin-right: 20px;
+ font-weight: 400;   
+}
+
+.header-contacts-us-wrapper {
+  display: flex;
+  align-items: center;
+  word-spacing: 4px;
+}
+
+.header-contact-us {
+  font-weight: 700;
+}
+
+.header-button-magnifier {
+  width: 60px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.header-logo :hover {
+  opacity: 50%;
+}
+
+.header-item:hover {
+  opacity: 50%;
+}
+
+.header-button-magnifier:hover {
+  opacity: 50%;
+}
+
+.header-contact-us:hover {
+  opacity: 50%;
+}
+
+.header-logo :active {
+  opacity: 20%;
+}
+
+.header-item:active {
+  opacity: 20%;
+}
+
+.header-button-magnifier:active {
+  opacity: 20%;
+}
+
+.header-contact-us:active {
+  opacity: 20%;
 }
 
 
