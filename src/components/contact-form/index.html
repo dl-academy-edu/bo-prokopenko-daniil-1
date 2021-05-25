@@ -1,0 +1,28 @@
+<form action="#" method="POST" class="contact-form">
+    <fieldset class="contact-wrapper">				                   
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" placeholder="@@placeholder-name">			
+    </fieldset>			            
+    <fieldset class="contact-line">
+        <div class="contact-wrapper contact-block">                    
+            <label for="contact-phone">Phone</label>
+            <input type="tel" id="contact-phone">
+        </div>
+        <div class="contact-wrapper contact-block">                    
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email">
+        </div>
+    </fieldset>
+    <fieldset class="contact-wrapper">                    
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+    </fieldset>
+    <fieldset class="contact-confirmation">                
+        <input type="checkbox" name="confirm" id="confirm" value="confirmed">
+        <label for="confirm" class="confirm-label">By clicking on the button, you consent to the processing of your personal data</label>                
+    </fieldset>
+    @@include('button/index.html', {
+        "text": "Submit",
+        "addition-class": "contact-submit"
+        })
+</form>            

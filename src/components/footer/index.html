@@ -5,7 +5,7 @@
           <nav class="footer-nav">
               <ul class="outline footer-nav-list">
                   <li><a href="#">About Us</a></li>
-                  <li><a href="pages/blog/index.html">Blog</a></li>
+                  <li><a href="/pages/blog/index.html">Blog</a></li>
                   <li><a href="#">Design Services</a></li>
                   <li><a href="#">Featured On</a></li>
                   <li><a href="#">2018 Holiday Catalog</a></li>
@@ -17,7 +17,7 @@
           <h4>Customer Information</h4>
           <nav class="footer-nav">
               <ul class="outline footer-nav-list">
-                  <li><a href="pages/contacts/index.html">Contact Us</a></li>
+                  <li><a href="/pages/contacts/index.html">Contact Us</a></li>
                   <li><a href="#">Sale Exclusions</a></li>
                   <li><a href="#">Shipping & Returns</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
@@ -32,7 +32,11 @@
               <form action="#" class="footer-form">            
                   <label for="email1" class="footer-label-email">Email</label>
                   <input type="email" placeholder="Email" id="email1" class="footer-input-field">
-                  <button class="button join">Join</button>
+                  <!-- <button class="button join">Join</button> -->
+                  @@include('button/index.html', {
+                    "text": "Join",
+                    "addition-class": "join" 
+                    })
               </form>
           </div>                               
           <ul class="outline footer-social-list">
