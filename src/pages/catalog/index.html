@@ -18,91 +18,55 @@
             @@include('breadcrumbs-last/index.html', {
                 "page-title": "Catalog"
             })
-            <div class="product-list-wrapper">
-                <ul class="products-list">
-                    <li>
-                        <a href="#" class="products-link">
-                            <div class="products-items prod-item-01">                            
-                                <div class="product-title">
-                                    <h3>Apparel kids</h3>                                
-                                </div>
-                                <div class="product-picture">
-                                    <img src="../../static/images/products-apparel_kids.png" width="244" height="177" alt="">
-                                </div>                            
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="products-link">
-                            <div class="products-items prod-item-02">
-                                <div class="product-title">
-                                    <h3>Holiday Shop</h3>                        
-                                </div>
-                                <div class="product-picture">
-                                    <img src="../../static/images/products-holiday_shop.png" width="208" height="244" alt="">
-                                </div> 
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="detail.html" class="products-link">
-                            <div class="products-items prod-item-03">
-                                <div class="product-title">
-                                    <h3>Toys</h3>                        
-                                </div>
-                                <div class="product-picture">
-                                    <img src="../../static/images/products-toys.png" width="270" height="270" alt="">
-                                </div> 
-                            </div>
-                        </a>
-                    </li>
+            <div class="product__list-wrapper">
+                <ul class="products__list">
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Apparel kids",
+                        "img-url": "/static/images/products-apparel_kids.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Holiday Shop",
+                        "img-url": "/static/images/products-holiday_shop.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "/pages/catalog/detail.html",
+                        "item-title": "Toys",
+                        "img-url": "/static/images/products-toys.png",
+                        "alt-text": ""
+                    })
                 </ul>                    
-                <ul class="products-list">
-                    <li>
-                        <a href="#" class="products-link">
-                            <div class="products-items prod-item-04">
-                                <div class="product-title">
-                                    <h3>Accessories</h3>  
-                                </div>
-                                <div class="product-picture">
-                                    <img src="../../static/images/products-accessories.png" width="240" height="250" alt="">
-                                </div> 
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="products-link">
-                            <div class="products-items prod-item-05">
-                                <div class="product-title">
-                                    <h3>Sale</h3>                        
-                                </div>
-                                <div class="product-picture">
-                                    <img src="../../static/images/products-sale.png" width="248" height="248" alt="">
-                                </div> 
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="products-link">
-                            <div class="products-items prod-item-06">
-                                <div class="product-title">
-                                    <h3>Apparel Adults</h3>                        
-                                </div>
-                                <div class="product-picture">
-                                    <img src="../../static/images/products-apparel_adults.png" width="272" height="205" alt="">
-                                </div> 
-                            </div>
-                        </a>
-                    </li>
+                <ul class="products__list">
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Accessories",
+                        "img-url": "/static/images/products-accessories.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Sale",
+                        "img-url": "/static/images/products-sale.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Apparel Adults",
+                        "img-url": "/static/images/products-apparel_adults.png",
+                        "alt-text": ""
+                    })
                 </ul>  
             </div>
         </section>
-        <section class="product_description container">
-            <div class="product_description-wrapper">
-                <h2 class="product_description-title">Product Description</h2>
-                <p class="product_description-details">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
-                <p class="product_description-details">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
-                <p class="product_description-details">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+        <section class="product-description container">
+            <div class="product-description__wrapper">
+                <h2 class="product-description__title">Product Description</h2>
+                <p class="product-description__details">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+                <p class="product-description__details">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+                <p class="product-description__details">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
             </div>        
         </section>
     </main>

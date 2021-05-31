@@ -2,26 +2,22 @@
 
 .breadcrumbs {
     margin: 18px 0 28px;
-  }
-  
-  .breadcrumbs-list {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .breadcrumbs-list .breadcrumbs-item:last-child {
-    opacity: 0.5;
-  }
-  
-  .breadcrumbs-item {
-    display: flex;
-    font-family: "Crimson Text", "Times New Roman", serif;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 25px;
-  }
-  
-  .breadcrumbs-item:not(:last-child)::after {
-    content: url(static/images/arrow-divider.svg);
-    margin: 0 21px;
-  }
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        .breadcrumbs__item:last-child {
+            opacity: 0.5;
+        }
+    }
+    &__item {
+        display: flex;
+        font-family: "Crimson Text", "Times New Roman", serif;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 25px;
+        &:not(:last-child)::after {
+            content: url(static/images/arrow-divider.svg);
+            margin: 0 21px;
+        }
+    }
+}

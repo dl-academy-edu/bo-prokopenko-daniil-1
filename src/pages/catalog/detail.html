@@ -12,7 +12,7 @@
 <body>
     @@include('header/index.html')
     <main>
-        <section class="toys-title container">
+        <section class="goods__title container">
             <h1>Toy for kids</h1>
             @@include('breadcrumbs-first/index.html')
             @@include('breadcrumbs-middle/index.html', {
@@ -23,153 +23,39 @@
                 "page-title": "Toys"
             })
         </section>
-        <div class="product_control_panel-wrapper">
-            <form class="product_control_panel container">
-                <div class="product_control_panel-fieldset costs-block">
-                    <div class="product_control_panel-title-wrapper">
-                        <h5>Cost</h5>  
-                    </div>
-                    <div class="cost-block-slider-wrapper">
-                        <input type="range" min="1" max="500" value="105" name="Cost" id="cost" class="cost-block-slider"> 
-                    </div>                    
-                    <div class="cost-block-value-limits-wrapper">
-                        <div class="cost-block-value-limits">
-                            0
-                        </div>
-                        <div class="cost-block-value-limits">
-                            500
-                        </div>
-                    </div>                    
-                </div>
-                <div class="product_control_panel-fieldset color-block">
-                    <div class="product_control_panel-title-wrapper">
-                        <h5>Color</h5>
-                    </div>                
-                    <input type="checkbox" name="color" id="color-black" value="black" checked>
-                    <label for="color-black" class="color-label">Black</label>
-                    <input type="checkbox" name="color" id="color-blue" value="blue">
-                    <label for="color-blue" class="color-label">Blue</label>
-                    <input type="checkbox" name="color" id="color-green" value="green">
-                    <label for="color-green" class="color-label">Green</label>
-                    <input type="checkbox" name="color" id="color-white" value="white">
-                    <label for="color-white" class="color-label">White</label>
-                </div>
-                <div class="product_control_panel-fieldset delivery-block">
-                    <div class="product_control_panel-title-wrapper delivery-block-title-wrapper">
-                        <h5>Delivery</h5>
-                    </div>                
-                    <input type="radio" name="shipping" id="delivery-free" value="free">
-                    <label for="delivery-free" class="delivery-label">Free shipping</label>
-                    <input type="radio" name="shipping" id="delivery-fast" value="free" checked>
-                    <label for="delivery-fast" class="delivery-label">Fast shipping</label>
-                </div>
-                <div class="product_control_panel-fieldset amount-block">
-                    <div class="product_control_panel-title-wrapper">
-                        <h5>Amount</h5> 
-                    </div>                
-                    <div class="amount-block-wrapper">
-                        <input type="radio" name="amount" id="amount-0-5" value="5" checked>
-                        <label for="amount-0-5" class="amount-label">0-5</label>
-                        <input type="radio" name="amount" id="amount-10-20" value="20">
-                        <label for="amount-10-20" class="amount-label">10-20</label>
-                        <input type="radio" name="amount" id="amount-20-50" value="50">
-                        <label for="amount-20-50" class="amount-label">20-50</label>
-                    </div>
-                </div>
-                <div class="product_control_panel-apply-wrapper">
-                    @@include('button/index.html', {
-                        "text": "Apply",
-                        "addition-class": "product_control_panel-apply" 
-                        })
-                </div>
-            </form>
-        </div>
-        <div class="container container-goods">
-            <ul class="goods-list">
-                <li class="goods-items-wrapper">
-                    <a href="#">
-                        <div class="goods-items">
-                            <div class="goods-button-wrapper">                                                       
-                                <div class="goods-button">Learn more</div>                            
-                            </div>
-                            <div class="goods-picture">
-                                <img src="../../static/images/goods-1.png" width="380" height="385" alt="Goods-1">
-                            </div>                                               
-                            <h4 class="goods-title">Sharky bean bag chair cover</h4>
-                            <p class="goods-price">$60.00 USD</p> 
-                        </div>
-                    </a>
-                </li>
-                <li class="goods-items-wrapper">
-                    <a href="#">
-                        <div class="goods-items">
-                            <div class="goods-button-wrapper">                                                       
-                                <div class="goods-button">Learn more</div>                            
-                            </div>
-                            <div class="goods-picture">
-                                <img src="../../static/images/goods-2.png" width="380" height="385" alt="Goods-2">
-                            </div>                                             
-                            <h4 class="goods-title">Brass deco frames</h4>
-                            <p class="goods-price">$66.00 USD</p> 
-                        </div>
-                    </a>
-                </li>
-                <li class="goods-items-wrapper">
-                    <a href="#">
-                        <div class="goods-items">
-                            <div class="goods-button-wrapper">                                                       
-                                <div class="goods-button">Learn more</div>                            
-                            </div>
-                            <div class="goods-picture">
-                                <img src="../../static/images/goods-3.png" width="380" height="385" alt="Goods-3">
-                            </div>                                              
-                            <h4 class="goods-title">Cibo full apron</h4>
-                            <p class="goods-price">$60.00 USD</p> 
-                        </div>
-                    </a>
-                </li>
-                <li class="goods-items-wrapper">
-                    <a href="#">
-                        <div class="goods-items">
-                            <div class="goods-button-wrapper">                                                       
-                                <div class="goods-button">Learn more</div>                            
-                            </div>
-                            <div class="goods-picture">
-                                <img src="../../static/images/goods-4.png" width="380" height="385" alt="Goods-4">
-                            </div>                                             
-                            <h4 class="goods-title">Gatcha gatcha gumball machine</h4>
-                            <p class="goods-price">$56.00 USD</p> 
-                        </div>
-                    </a>
-                </li>
-                <li class="goods-items-wrapper">
-                    <a href="#">
-                        <div class="goods-items">
-                            <div class="goods-button-wrapper">                                                       
-                                <div class="goods-button">Learn more</div>                            
-                            </div>
-                            <div class="goods-picture">
-                                <img src="../../static/images/goods-5.png" width="380" height="385" alt="Goods-5">
-                            </div>                                             
-                            <h4 class="goods-title">Christmas advent scented candle</h4>
-                            <p class="goods-price">$29.00 USD</p> 
-                        </div>
-                    </a>
-                </li>
-                <li class="goods-items-wrapper">
-                    <a href="#">
-                        <div class="goods-items">
-                            <div class="goods-button-wrapper">                                                       
-                                <div class="goods-button">Learn more</div>                            
-                            </div>
-                            <div class="goods-picture">
-                                <img src="../../static/images/goods-6.png" width="380" height="382" alt="Goods-6">
-                            </div>                                             
-                            <h4 class="goods-title">Tangle spinning tea light</h4>
-                            <p class="goods-price">$56.00 USD</p> 
-                        </div>
-                    </a>
-                </li>
+        @@include('product-control-panel/index.html')
+        <div class="container goods__container">
+            <ul class="goods__list">
+                @@include('goods-item/index.html', {
+                    "picture-url": "../../static/images/goods-1.png",
+                    "title": "Sharky bean bag chair cover",
+                    "price": "60.00"
+                })
+                @@include('goods-item/index.html', {
+                    "picture-url": "../../static/images/goods-2.png",
+                    "title": "Brass deco frames",
+                    "price": "66.00"
+                })
+                @@include('goods-item/index.html', {
+                    "picture-url": "../../static/images/goods-3.png",
+                    "title": "Cibo full apron",
+                    "price": "60.00"
+                })
+                @@include('goods-item/index.html', {
+                    "picture-url": "../../static/images/goods-4.png",
+                    "title": "Gatcha gatcha gumball machine",
+                    "price": "56.00"
+                })
+                @@include('goods-item/index.html', {
+                    "picture-url": "../../static/images/goods-5.png",
+                    "title": "Christmas advent scented candle",
+                    "price": "29.00"
+                })
+                @@include('goods-item/index.html', {
+                    "picture-url": "../../static/images/goods-6.png",
+                    "title": "Tangle spinning tea light",
+                    "price": "56.00"
+                })
             </ul>
         </div>
         @@include('paging/index.html')

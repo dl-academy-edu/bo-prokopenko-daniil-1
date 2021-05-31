@@ -14,17 +14,13 @@
     cursor: pointer;
     margin: 0;
     height: 40px;
-  }
-  
-.button:hover {
-    background: #C29974;
+    &:hover {
+        background: #C29974;
+    }
+    &:active {
+        background: #CFAF91;
+    }
+    &:disabled {
+        background: #C1C1C1;
+    }
 }
-
-.button:active {
-    background: #CFAF91;
-}
-
-.button:disabled {
-    background: #C1C1C1;
-}
-

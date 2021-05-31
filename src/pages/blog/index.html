@@ -19,56 +19,56 @@
                 "page-title": "Blog"
             })
         </section>
-        <div class="blogs container container-blogs">
-            <ul class="blogs-list">
-                <li class="blogs-items">
-                    <a href="#" class="blog-item-link">
-                        <img class="blogs-image" src="../../static/images/blogs-1.jpg" width="380" height="220" alt="Blog-1">
-                        <p class="blogs-date">23rd August 2018</p>
-                        <h6>Top 5 fastest growing it service companies in philly</h6>
-                        <p class="blogs-text">Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.</p>
-                    </a>
-                </li>
-                <li class="blogs-items">
-                    <a href="#" class="blog-item-link">
-                        <img class="blogs-image" src="../../static/images/blogs-2.jpg" width="380" height="220" alt="Blog-2">
-                        <p class="blogs-date">23rd August 2018</p>
-                        <h6>Best financial</h6>
-                        <p class="blogs-text">Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.</p>
-                    </a>
-                </li>
-                <li class="blogs-items">
-                    <a href="#" class="blog-item-link">
-                        <img class="blogs-image" src="../../static/images/blogs-3.jpg" width="380" height="220" alt="Blog-3">
-                        <p class="blogs-date">23rd August 2018</p>
-                        <h6>Company logo or brand identity: which one is more important? brand identity</h6>
-                        <p class="blogs-text">To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.</p>
-                    </a>
-                </li>
-                <li class="blogs-items">
-                    <a href="#" class="blog-item-link">
-                        <img class="blogs-image" src="../../static/images/blogs-4.jpg" width="380" height="220" alt="Blog-4">
-                        <p class="blogs-date">23rd August 2018</p>
-                        <h6>Best financial</h6>
-                        <p class="blogs-text">Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.</p>
-                    </a>
-                </li>
-                <li class="blogs-items">
-                    <a href="#" class="blog-item-link">
-                        <img class="blogs-image" src="../../static/images/blogs-5.jpg" width="380" height="220" alt="Blog-5">
-                        <p class="blogs-date">23rd August 2018</p>
-                        <h6>Company logo or brand identity: which one is more important? brand identity</h6>
-                        <p class="blogs-text">To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.</p>
-                    </a>
-                </li>
-                <li class="blogs-items">
-                    <a href="#" class="blog-item-link">
-                        <img class="blogs-image" src="../../static/images/blogs-6.jpg" width="380" height="220" alt="Blog-6">
-                        <p class="blogs-date">23rd August 2018</p>
-                        <h6>Top 5 fastest growing it service companies in philly</h6>
-                        <p class="blogs-text">>Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.</p>
-                    </a>
-                </li>
+        <div class="blogs container blogs__container-stretch">
+            <ul class="blogs__list">
+                @@include('blog-item/index.html', {
+                    "link-url": "#",
+                    "img-url": "/static/images/blogs-1.jpg",
+                    "alt-text": "Image",
+                    "item-date": "23rd August 2018",
+                    "item-title": "Top 5 fastest growing it service companies in philly",
+                    "item-text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace."
+                })
+                @@include('blog-item/index.html', {
+                    "link-url": "#",
+                    "img-url": "/static/images/blogs-2.jpg",
+                    "alt-text": "Image",
+                    "item-date": "23rd August 2018",
+                    "item-title": "Best financial",
+                    "item-text": "Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking."
+                })
+                @@include('blog-item/index.html', {
+                    "link-url": "#",
+                    "img-url": "/static/images/blogs-3.jpg",
+                    "alt-text": "Image",
+                    "item-date": "23rd August 2018",
+                    "item-title": "Company logo or brand identity: which one is more important? brand identity",
+                    "item-text": "To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success."
+                })
+                @@include('blog-item/index.html', {
+                    "link-url": "#",
+                    "img-url": "/static/images/blogs-4.jpg",
+                    "alt-text": "Image",
+                    "item-date": "23rd August 2018",
+                    "item-title": "Best financial",
+                    "item-text": "Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking."
+                })
+                @@include('blog-item/index.html', {
+                    "link-url": "#",
+                    "img-url": "/static/images/blogs-5.jpg",
+                    "alt-text": "Image",
+                    "item-date": "23rd August 2018",
+                    "item-title": "Company logo or brand identity: which one is more important? brand identity",
+                    "item-text": "To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success."
+                })                
+                @@include('blog-item/index.html', {
+                    "link-url": "#",
+                    "img-url": "/static/images/blogs-6.jpg",
+                    "alt-text": "Image",
+                    "item-date": "23rd August 2018",
+                    "item-title": "Top 5 fastest growing it service companies in philly",
+                    "item-text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace."
+                })                
             </ul>
         </div>
         @@include('paging/index.html')

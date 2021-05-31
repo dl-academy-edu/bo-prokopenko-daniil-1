@@ -1,85 +1,70 @@
 /* header */
 
+$hover-opacity: 50%;
+$active-opacity: 20%;
+
 .header {
-  padding: 35px 0;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  line-height: 19px;
-  text-transform: uppercase;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    &__logo {
+        margin-right: 40px;
+        img {
+            display: block;
+        }
+        &:hover {
+            opacity: $hover-opacity;
+        }
+        &:active {
+            opacity: $active-opacity;
+        }
+    }
+    &__nav {
+        margin: 0 auto 0 20px;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 20px;
+        font-weight: 400;
+        &:hover {
+            opacity: $hover-opacity;
+        }
+        &:active {
+            opacity: $active-opacity;
+        }
+    }
+    &__contact-us {
+        font-weight: 700;
+        &:hover {
+            opacity: $hover-opacity;
+        }
+        &:active {
+            opacity: $active-opacity;
+        }
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            word-spacing: 4px;
+        }
+    }
+    &__button-magnifier {
+        width: 60px;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        padding: 0;
+        margin-top: 5px;
+        &:hover {
+            opacity: $hover-opacity;
+        }
+        &:active {
+            opacity: $active-opacity;
+        }
+    }   
 }
-
-.header-logo {
-  margin-right: 40px;
-}
-
-.header-logo img {
-  display: block;
-}
-
-.header-nav {
-  margin: 0 auto 0 20px;
-}
-
-.header-list {
-  display: flex;
-  align-items: center;
-}
-
-.header-item {
- margin-right: 20px;
- font-weight: 400;   
-}
-
-.header-contacts-us-wrapper {
-  display: flex;
-  align-items: center;
-  word-spacing: 4px;
-}
-
-.header-contact-us {
-  font-weight: 700;
-}
-
-.header-button-magnifier {
-  width: 60px;
-  border: none;
-  background-color: white;
-  cursor: pointer;
-  padding: 0;
-  margin-top: 5px;
-}
-
-.header-logo :hover {
-  opacity: 50%;
-}
-
-.header-item:hover {
-  opacity: 50%;
-}
-
-.header-button-magnifier:hover {
-  opacity: 50%;
-}
-
-.header-contact-us:hover {
-  opacity: 50%;
-}
-
-.header-logo :active {
-  opacity: 20%;
-}
-
-.header-item:active {
-  opacity: 20%;
-}
-
-.header-button-magnifier:active {
-  opacity: 20%;
-}
-
-.header-contact-us:active {
-  opacity: 20%;
-}
-
-

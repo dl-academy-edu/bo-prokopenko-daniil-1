@@ -5,93 +5,83 @@
     min-width: 680px;
     background: #E5EAF8;
     padding: 42px 40px;
-  }
+    fieldset {
+        border: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 21px;
+    }
+    label {
+        font-size: 14px;
+        line-height: 19px;
+        color: #1E0606;
+        margin-bottom: 3px;
+    }
+    input,
+    textarea {
+        box-sizing: border-box;    
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 12px 20px;
+        font-size: 18px;
+        line-height: 25px;
+        background: #fff;
+    }
+    input {
+        height: 50px;
+        &::placeholder {
+            color: #1E0606;
+        }
+    }
+    textarea {
+        height: 150px;
+        resize: none;
+    }
+    input:hover,
+    textarea:hover {
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }  
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        &_block {
+            max-width: 290px;
+            width: 100%;
+        }
+    }
+    &__line {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__confirmation {
+        margin-bottom: 17px;
+        input[type="checkbox"] {
+            display: none;
+        }
+    }
+    &__confirm-label {
+        display: block;
+        background: url(static/images/checkbox.svg) no-repeat 0 0;
+        padding-left: 35px;
+        cursor: pointer;
+        margin: 0px 0;
+    }
+    &__confirmation input[type="checkbox"]:checked + &__confirm-label {
+        background: url(static/images/checkbox-checked.svg) no-repeat 0 0;
+    }
+    &__submit-btn {
+        max-width: 106px;
+    }
+}
+
+
   
-  .contact-form fieldset {
-    border: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 21px;
-  }
+
   
-  .contact-form label {
-    font-size: 14px;
-    line-height: 19px;
-    color: #1E0606;
-    margin-bottom: 3px;
-  }
   
-  .contact-form input,
-  .contact-form textarea {
-    box-sizing: border-box;    
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 12px 20px;
-    font-size: 18px;
-    line-height: 25px;
-    background: #fff;
-  }
-  
-  .contact-form input {
-    height: 50px;
-  }
-  
-  .contact-form textarea {
-    height: 150px;
-    resize: none;
-  }
-  
-  .contact-form input:hover,
-  .contact-form textarea:hover {
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact-form input::placeholder {
-    color: #1E0606;
-  }
-  
-  .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-block {
-    max-width: 290px;
-    width: 100%;
-  }
-  
-  .contact-line {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .contact-form .contact-confirmation {
-    margin-bottom: 17px;
-  }
-  
-  .contact-confirmation input[type="checkbox"] {
-    display: none;
-  }
-  
-  .confirm-label {
-    display: block;
-    background: url(static/images/checkbox.svg) no-repeat 0 0;
-    padding-left: 35px;
-    cursor: pointer;
-    margin: 0px 0;
-  }
-  
-  .contact-confirmation input[type="checkbox"]:checked + .confirm-label {
-    background: url(static/images/checkbox-checked.svg) no-repeat 0 0;
-  }
-  
-  .contact-submit {
-    max-width: 106px;
-  }

@@ -1,0 +1,24 @@
+.product-items-scroll {
+    display: flex;
+    align-items: center;
+    &__arrow-wrapper {
+        width: 37px;
+        box-sizing: border-box;
+        display: block;
+        margin-right: 6px;
+    }
+    &__text {
+        margin-left: 14px;
+        max-width: 550px;
+        box-sizing: border-box;
+    }
+    &__arrow-btn {
+        background: rgba(112, 187, 220, 0.2);
+        color: #fff;
+        width: 37px;
+        height: 37px;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,59 @@
+.goods-item {
+    display: block;
+    position: relative;
+    &__wrapper {
+        margin: 20px 10px;
+    }
+    &__button-wrapper {
+        box-sizing: border-box;
+        width: 380px;
+        height: 385px;
+        padding: 89px 0;  
+    }
+    &__picture {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    &__button {
+        width: 207px;
+        height: 207px;
+        background-color: rgba(229, 234, 248, 0);
+        color: rgba(0, 0, 0, 0);
+        margin: 0 auto;
+        text-align: center;
+        font-family: "Montserrat", Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 29px;
+        line-height: 207px;
+        font-weight: 700;
+    }
+    &__title {
+        font-size: 14px;
+        line-height: 19px;
+        color: #1E0606;
+        text-transform: uppercase;
+        padding: 10px 0;
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    &__price {
+        font-weight: 700;
+        padding: 6px 0;
+        margin: 0;
+        text-align: center;
+    }
+    &__wrapper a:hover &__button {
+        background-color:  rgba(229, 234, 248, 0.9);
+        color: #000
+    }
+    &__wrapper a:active &__button {
+        background-color:  rgba(229, 234, 248, 0.67);
+        color: #000
+    }
+}
+
+
+

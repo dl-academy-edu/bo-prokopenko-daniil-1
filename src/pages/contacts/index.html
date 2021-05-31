@@ -13,48 +13,20 @@
     @@include('header/index.html')
     <main>
         <section class="contacts container">
-            <h1 class="contacts-title">Contact us</h1>
+            <h1 class="contacts__title">Contact us</h1>
             @@include('breadcrumbs-first/index.html')
             @@include('breadcrumbs-last/index.html', {
                 "page-title": "Contact Us"
             })
         </section>
-        <div class="contacts-support-wrapper container">        
-            <!-- <form action="#" method="POST" class="contact-form">
-                <fieldset class="contact-wrapper">				                   
-                        <label for="contact-name">Name</label>
-                        <input type="text" id="contact-name" placeholder="Ivan Ivanov">			
-                </fieldset>			            
-                <fieldset class="contact-line">
-                    <div class="contact-wrapper contact-block">                    
-                        <label for="contact-phone">Phone</label>
-                        <input type="tel" id="contact-phone">
-                    </div>
-                    <div class="contact-wrapper contact-block">                    
-                        <label for="contact-email">Email</label>
-                        <input type="email" id="contact-email">
-                    </div>
-                </fieldset>
-                <fieldset class="contact-wrapper">                    
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message"></textarea>
-                </fieldset>
-                <fieldset class="contact-confirmation">                
-                    <input type="checkbox" name="confirm" id="confirm" value="confirmed">
-                    <label for="confirm" class="confirm-label">By clicking on the button, you consent to the processing of your personal data</label>                
-                </fieldset>
-                @@include('button/index.html', {
-                    "text": "Submit",
-                    "addition-class": "contact-submit"
-                    })
-            </form>             -->
+        <div class="contacts__wrapper container">        
             @@include('contact-form/index.html', {
                 "placeholder-name": "Ivan Ivanov"
             })
             <div class="support">
                 <p>Our support team are on-hand to assist with any issues you are experiencing.</p>
                 <p>Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
-                <p class="support-statement">An expert is waiting to help you!</p>
+                <p class="support__statement">An expert is waiting to help you!</p>
             </div>
         </div>
     </main>

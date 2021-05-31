@@ -13,158 +13,115 @@
     @@include('header/index.html')
     <main>
         <section class="banner container">
-            <div class="banner-logo-block">
-                <div class="banner-burger">
-                    <div class="banner-page-number">01</div>
-                    <div class="banner-burger-wrapper">
-                        <input name="burger" value="1" id="burger_1" type="radio" checked/>
-                        <label for="burger_1" class="banner-burger-label"></label>
-                        <input name="burger" value="2" id="burger_2" type="radio" />
-                        <label for="burger_2" class="banner-burger-label"></label>
-                        <input name="burger" value="3" id="burger_3" type="radio" />
-                        <label for="burger_3" class="banner-burger-label"></label>
-                        <input name="burger" value="4" id="burger_4" type="radio" />
-                        <label for="burger_4" class="banner-burger-label"></label>
-                    </div>
+            <div class="banner__burger-wrapper">
+                <div class="banner__burger">
+                    <div class="banner__page-number">01</div>
+                    @@include('burger/index.html')
                 </div>
-                <div class="banner-title-block">
+                <div class="banner__title-block">
                     <h1>The ooh noo collection</h1>
-                    <p class="banner-designed">Designed in Slovenia</p>                    
+                    <p class="banner__designed">Designed in Slovenia</p>                    
                     @@include('button/index.html', {
                         "text": "Explore now",
-                        "addition-class": "banner-btn banner-js" 
+                        "addition-class": "banner__btn banner-js" 
                         })
                 </div>
-                <img src="static/images/banner-ooh_noo.png" class="banner-logo-img" width="636" height="461" alt="Banner">                           
+                <img src="static/images/banner-ooh_noo.png" class="banner__logo-img" width="636" height="461" alt="Banner">                           
             </div>           
-            <p class="free-shipping">Free (continental) usa shipping on all orders of $100 usd or more!</p>            
+            <p class="banner__free-shipping">Free (continental) usa shipping on all orders of $100 usd or more!</p>            
         </section>
         <section class="products container">
             <h2>Category products</h2>
-            <ul class="products-list">
-                <li>
-                     <a href="#" class="products-link">
-                         <div class="products-items prod-item-01">                            
-                             <div class="product-title">
-                                 <h3>Apparel kids</h3>                                
-                             </div>
-                             <div class="product-picture">
-                                <img src="static/images/products-apparel_kids.png" width="244" height="177" alt="">
-                            </div> 
-                         </div>
-                     </a>
-                </li>
-                <li>
-                     <a href="#" class="products-link">
-                         <div class="products-items prod-item-02">
-                             <div class="product-title">
-                                 <h3>Holiday Shop</h3>                        
-                             </div>
-                             <div class="product-picture">
-                                <img src="static/images/products-holiday_shop.png" width="208" height="244" alt="">
-                            </div> 
-                         </div>
-                     </a>
-                </li>
-                <li>
-                     <a href="pages/catalog/detail.html" class="products-link">
-                         <div class="products-items prod-item-03">
-                             <div class="product-title">
-                                 <h3>Toys</h3>                        
-                             </div>
-                             <div class="product-picture">
-                                <img src="static/images/products-toys.png" width="270" height="270" alt="">
-                            </div> 
-                         </div>
-                     </a>
-                </li>
-                <li>
-                    <a href="#" class="products-link">
-                        <div class="products-items prod-item-04">
-                            <div class="product-title">
-                                <h3>Accessories</h3>  
-                            </div>
-                            <div class="product-picture">
-                                <img src="static/images/products-accessories.png" width="240" height="250" alt="">
-                            </div> 
-                        </div>
-                    </a>
-                </li>
+            <ul class="products__list">
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Apparel kids",
+                    "img-url": "/static/images/products-apparel_kids.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Holiday Shop",
+                    "img-url": "/static/images/products-holiday_shop.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "/pages/catalog/detail.html",
+                    "item-title": "Toys",
+                    "img-url": "/static/images/products-toys.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Accessories",
+                    "img-url": "/static/images/products-accessories.png",
+                    "alt-text": ""
+                })
             </ul>
-            <div class="list-control-buttons">
-                <div class="buttons-wrapper">
-                    <button class="button-arrow"><img src="static/images/arrow-left.svg" width="18" height="30" alt=""></button>                
-                </div>
-                <div class="buttons-wrapper">                
-                    <button class="button-arrow"><img src="static/images/arrow-right.svg" width="18" height="30" alt=""></button>
-                </div>
-                <div class="text-wrapper">
-                    <p>Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
-                </div>                      
-            </div>                    
+            @@include('product-items-scroll/index.html')
         </section>        
         <section class="delivery container">
             <div>
                 <img src="static/images/delivery-portrait.png" width="480" height="559" alt="Portrait">
             </div>
-            <div class="delivery-wrapper">
+            <div class="delivery__wrapper">
                 <div >
-                    <h2 class="delivery-title">Delivery</h2>
+                    <h2 class="delivery__title">Delivery</h2>
                 </div>            
-                <ul class="outline delivery-list">
-                    <li class="delivery-list-item delivery-selected-item">
+                <ul class="outline delivery__list">
+                    <li class="delivery__list-item delivery__list-item_selected">
                         Delivery
                     </li>
-                    <li class="delivery-list-item">
+                    <li class="delivery__list-item">
                         Guarantee
                         
                     </li>
-                    <li class="delivery-list-item">
+                    <li class="delivery__list-item">
                         Credit                  
                     </li>
                 </ul>
-                <p class="delivery-text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-                <p class="delivery-text">What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
+                <p class="delivery__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                <p class="delivery__text">What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
                 @@include('button/index.html', {
                     "text": "Learn more",
-                    "addition-class": "learn-more" 
+                    "addition-class": "delivery__learn-more-btn" 
                     })
             </div>
         </section>
         <div class="brands container">            
-            <ul class="outline brands-list">
-                <li class="brand-item"><a href="#"><img src="static/images/brands-mailru.svg" width="193" height="60" alt="Mail.ru"></a></li>
-                <li class="brand-item"><a href="#"><img src="static/images/brands-apple.svg" width="179" height="61" alt="Apple"></a></li>
-                <li class="brand-item"><a href="#"><img src="static/images/brands-eltex.svg" width="216" height="46" alt="Eltex"></a></li>
-                <li class="brand-item"><a href="#"><img src="static/images/brands-owox.svg" width="211" height="40" alt="Owox"></a></li>
+            <ul class="outline brands__list">
+                <li class="brands__list-item"><a href="#"><img src="static/images/brands-mailru.svg" width="193" height="60" alt="Mail.ru"></a></li>
+                <li class="brands__list-item"><a href="#"><img src="static/images/brands-apple.svg" width="179" height="61" alt="Apple"></a></li>
+                <li class="brands__list-item"><a href="#"><img src="static/images/brands-eltex.svg" width="216" height="46" alt="Eltex"></a></li>
+                <li class="brands__list-item"><a href="#"><img src="static/images/brands-owox.svg" width="211" height="40" alt="Owox"></a></li>
             </ul>
         </div>
         <div class="about container">
             <section class="about-design">
-                <div class="about-title-shift">
+                <div class="about-design__title">
                     <h2>Design life kids</h2>
                 </div>                
-                <div class="about-design-block">
+                <div class="about-design__wrapper">
                     <a href="#">About Us</a>
                     <p>
                         Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.
                     </p>                    
                     @@include('button/index.html', {
                         "text": "Buy now",
-                        "addition-class": "buy-now" 
+                        "addition-class": "about-design__buy-now-btn" 
                         })
                 </div>                
             </section>        
             <section class="about-contacts">
-                <div class="about-title-shift">
+                <div class="about-contacts__title">
                     <h2>Contacts</h2>
                 </div>                
-                <div class="about-design-block about-contacts-block">
+                <div class="about-contacts__wrapper">
                     <p>
                     Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.
                     </p>
                 </div>
-                <div class="about-map">                    
+                <div class="about-contacts__map">                    
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1344.9690439823269!2d-122.33340919912241!3d47.60789351940776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab402255555%3A0x2403090dada9b694!2skcbf!5e0!3m2!1sru!2sru!4v1621594270492!5m2!1sru!2sru" width="483" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>                            
             </section>

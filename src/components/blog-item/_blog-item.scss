@@ -1,0 +1,25 @@
+.blog-item {
+    margin: 18px 10px 15px;
+    display: block;
+    width: 380px;
+    &__image {
+        display: block;
+    }
+    &__date {
+        padding: 20px 0 8px;
+        margin: 0;
+        color: #818181;
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 25px;
+        padding: 15px 0 0;
+        margin: 0;
+    }
+    &__link {
+        &:hover h6,
+        &:active h6 {
+            text-decoration: underline;
+        }
+    }
+}
