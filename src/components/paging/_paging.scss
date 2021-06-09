@@ -1,50 +1,50 @@
 /* page selection */
 
+$transition: .4s;
+
 .page-selecting {
     display: flex;
     justify-content: space-between;
     margin-bottom: 58px;
-  }
-  
-  .page-selecting-button {
-    background-color: #fff;
-    Width: 18px;
-    Height: 30px;
-    border: none;
-    padding: 0;
-  }
-  
-  .page-selecting-radio-block {
-    display: flex;
-  }
-  
-  .page-selecting-radio-block input[type="radio"] {
-    display: none;
-  }
-  
-  .paging-label {
-    width: 75px;
-    height: 30px;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;        
-  }
-  
-  .paging-label:hover {
-    color: #DADADA;
-  }
-  
-  .page-selecting input[type="radio"]:checked + .paging-label {
-    color:#C29974;
-  }
-  
-  .page-selecting-arrow:hover {
-    stroke: #C29974;
-    stroke-opacity: 1;
-  }
-  
-  .page-selecting-arrow:active {
-    stroke: #C29974;
-    stroke-opacity: 0.5;
-  }
+    &__button {
+        background-color: #fff;
+        width: 18px;
+        height: 30px;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    &__radio-block {
+        display: flex;
+        input[type="radio"] {
+            display: none;
+        }
+    }
+    &__label {
+        width: 75px;
+        height: 30px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            color: #DADADA;
+        } 
+    }
+    &__arrow {
+        transition: $transition;
+    }
+    & input[type="radio"]:checked + &__label {
+        color:#C29974;
+    }
+    &__button:hover &__arrow {
+        stroke: #C29974;
+        stroke-opacity: 1;
+    }
+    &__button:active &__arrow {
+        stroke: #C29974;
+        stroke-opacity: 0.5;
+    }
+}

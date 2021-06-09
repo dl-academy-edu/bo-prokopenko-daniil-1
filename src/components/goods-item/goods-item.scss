@@ -1,3 +1,5 @@
+$transition: .4s;
+
 .goods-item {
     display: block;
     position: relative;
@@ -29,6 +31,7 @@
         font-size: 29px;
         line-height: 207px;
         font-weight: 700;
+        transition: $transition;
     }
     &__title {
         font-size: 14px;

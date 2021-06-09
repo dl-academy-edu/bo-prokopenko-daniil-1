@@ -1,0 +1,107 @@
+@keyframes chat {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 500px;
+    }
+}
+
+@keyframes chat-close {
+    to {
+        max-height: 0;
+    }
+}
+
+.chat {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #fff;
+    max-width: 300px;
+    height: 488px;
+    max-height: 488px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+    overflow: hidden;
+    animation: chat-close 3s forwards;
+    transition: .3s;
+    animation-delay:6s;
+    &__header {
+        background: #F6F6F8;
+        border-bottom: 1px solid #D9D9DB;
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #27253F;
+    }
+    &__desc {
+        font-size: 12px;
+        line-height: 14px;
+        color: #6B6A6A;
+    }
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+    &__content {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+    &__message-container {
+        max-height: 0;
+        animation: chat 2s forwards;
+        @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i + s;
+            }
+        }
+    }
+    &__message {
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        position: relative;
+        width: 70%;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .message-to {
+        background: #E4E3E8;
+        margin: 0 auto 15px 15px;
+        &::after {
+            background: url('/static/images/gray-tail.svg');
+            left: -5px;
+        }
+    }
+    .message-from {
+        background: #2198F4;
+        color: #fff;
+        margin: 0 15px 15px auto;
+        &::after {
+            background: url('/static/images/blue-tail.svg');
+            right: -5px;
+        }
+    }
+}

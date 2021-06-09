@@ -1,5 +1,7 @@
 /* Footer */
 
+$transition: .4s;
+
 .footer {
     color: #fff;
     background-color: #434343;
@@ -22,18 +24,21 @@
         border-top: 1px solid #666666;
         &-list {
             line-height: 37px;
-            margin: 23px 0 19px;
-            & li:hover {
-                opacity: 50%;
+            margin: 23px 0 19px;            
+            & li {
+                transition: opacity $transition;
+                &:hover {
+                    opacity: 50%;
+                }
+                &:active {
+                    opacity: 20%;
+                }
             }
-            & li:active {
-                opacity: 20%;
+            a {
+                color: #fff;
             }
         }   
-    }
-    a {
-        color: #fff;
-    }
+    }    
     &__wrapper &__section:not(:last-child) {
         margin-right: 20px;
     }
@@ -43,6 +48,7 @@
             flex-direction: row-reverse;
             justify-content: flex-end;
             align-items: center;
+            transition: $transition;
             input[type="radio"] {
                 display: none;
             }
@@ -52,17 +58,21 @@
             width: 18px;
             height: 17px;
             margin: 1px;
+            transition: $transition;
             background: url(static/images/rate-star.svg) no-repeat 50% 2px;
             cursor: pointer;
         }
         &-block &-label:hover, &-block &-label:hover ~ &-label {
             background: url(static/images/rate-star-hover.svg) no-repeat 50% 2px;
+            transition: $transition;
         }
         &-block &-label:active, &-block &-label:active ~ &-label {
             background: url(static/images/rate-star-active.svg) no-repeat 50% 2px;
+            transition: $transition;
         }
         &-block input[type="radio"]:checked ~ &-label {
             background: url(static/images/rate-star-active.svg) no-repeat 50% 2px;
+            transition: $transition;
         }
         &-title {
             color: #fff;
@@ -71,12 +81,15 @@
         }
         &-block &-label:hover ~ &-title {
             color: #C29974;
+            transition: $transition;
         }
         &-block &-label:active ~ &-title {
             color: #C29974;
+            transition: $transition;
         }
         &-block input[type="radio"]:checked ~ &-title {
             color: #C29974;
+            transition: $transition;
         }
     }
     &__social-list {
@@ -84,6 +97,7 @@
         margin-top: 25px;
         li {
             padding: 0 10px 0 0;
+            transition: opacity $transition;
             &:hover {
                 opacity: 50%;
             }
@@ -110,12 +124,12 @@
     }
     &__dl-digital-link {
         color: #a2a2a2;
+        transition: $transition;
         &:hover,
         &:active {
             color: #ffffff;
             text-decoration: underline;  
         }
-
     }
     &__button-join {
         max-width: 81px;

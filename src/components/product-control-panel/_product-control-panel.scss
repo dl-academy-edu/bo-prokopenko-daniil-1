@@ -1,5 +1,7 @@
 /* Control panel */
 
+$transition: .4s;
+
 .product-control-panel {
     display: flex;
     &__wrapper {
@@ -192,6 +194,7 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
         background-color:#fff;
         text-align: center;
         line-height: 35px;
+        transition: background-color $transition;
         &:hover {
             background-color: #EDDEEB;
         }

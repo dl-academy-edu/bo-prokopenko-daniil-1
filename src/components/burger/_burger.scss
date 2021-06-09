@@ -1,3 +1,5 @@
+$transition: .4s;
+
 .burger {
     padding-left: 2px;
     input[type="radio"] {
@@ -10,6 +12,7 @@
         margin: 0 0 11px 0;
         background-color:#D6CAC2;
         cursor: pointer;
+        transition: $transition;
         &:hover,
         &:active {
             background-color:#725F5B;
