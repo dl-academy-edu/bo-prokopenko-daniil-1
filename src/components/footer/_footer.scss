@@ -48,7 +48,6 @@ $transition: .4s;
             flex-direction: row-reverse;
             justify-content: flex-end;
             align-items: center;
-            transition: $transition;
             input[type="radio"] {
                 display: none;
             }
@@ -56,42 +55,40 @@ $transition: .4s;
         &-label {
             display: block;
             width: 18px;
-            height: 17px;
+            height: 13px;
             margin: 1px;
-            transition: $transition;
-            background: url(static/images/rate-star.svg) no-repeat 50% 2px;
             cursor: pointer;
+            svg {
+                display: block;
+                transition: $transition;
+            }
         }
-        &-block &-label:hover, &-block &-label:hover ~ &-label {
-            background: url(static/images/rate-star-hover.svg) no-repeat 50% 2px;
-            transition: $transition;
+
+        &-block &-label:hover > svg, &-block &-label:hover ~ &-label > svg {
+            fill: #836E5B ;
         }
-        &-block &-label:active, &-block &-label:active ~ &-label {
-            background: url(static/images/rate-star-active.svg) no-repeat 50% 2px;
-            transition: $transition;
+
+        &-block &-label:active > svg, 
+        &-block &-label:active ~ &-label > svg, 
+        &-block input[type="radio"]:checked ~ &-label > svg {
+            fill: #C29974 ;
         }
-        &-block input[type="radio"]:checked ~ &-label {
-            background: url(static/images/rate-star-active.svg) no-repeat 50% 2px;
-            transition: $transition;
-        }
+
         &-title {
             color: #fff;
             margin-right: 24px;
             font-size: 16px;
-        }
-        &-block &-label:hover ~ &-title {
-            color: #C29974;
             transition: $transition;
         }
-        &-block &-label:active ~ &-title {
-            color: #C29974;
-            transition: $transition;
-        }
+
+        &-block &-label:hover ~ &-title,
+        &-block &-label:active ~ &-title,
         &-block input[type="radio"]:checked ~ &-title {
             color: #C29974;
-            transition: $transition;
+
         }
     }
+    
     &__social-list {
         display: flex;
         margin-top: 25px;

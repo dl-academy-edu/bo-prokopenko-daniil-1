@@ -67,7 +67,7 @@
         animation: chat 2s forwards;
         @for $i from 1 through 8 {
             &:nth-child(#{$i}) {
-                animation-delay: $i + s;
+                animation-delay: $i + 1s;
             }
         }
     }
