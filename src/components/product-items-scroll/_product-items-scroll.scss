@@ -1,24 +1,97 @@
 .product-items-scroll {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     &__arrow-wrapper {
-        width: 37px;
         box-sizing: border-box;
         display: block;
         margin-right: 6px;
+        
     }
     &__text {
-        margin-left: 14px;
-        max-width: 550px;
         box-sizing: border-box;
+        p {
+            margin: 0;
+        }
     }
     &__arrow-btn {
         background: rgba(112, 187, 220, 0.2);
         color: #fff;
-        width: 37px;
-        height: 37px;
         padding: 0;
         border: none;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: block;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .product-items-scroll {
+        &__arrow-wrapper {
+            width: 37px;            //to 1200+
+            padding-top: 4px;           //to 1200+
+        }
+        &__text {
+            margin-left: 14px;           //to 1200+
+            max-width: 550px;                  //to 1200+
+        }
+        &__arrow-btn {
+            width: 37px;      //to 1200+
+            height: 37px;      //to 1200+    
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .product-items-scroll {
+        &__arrow-wrapper {
+            width: 37px;            
+            padding-top: 4px;           
+        }
+        &__text {
+            margin-left: 14px;          
+            max-width: 550px;
+            p {
+                font-size: 14px;
+                line-height: 19px;
+            }                
+        }
+        &__arrow-btn {
+            width: 36px;      
+            height: 36px;
+            img {
+                width: 16.6px;      
+                height: 28.2px;
+            }     
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .product-items-scroll {
+        &__arrow-wrapper {
+            width: 37px;            
+            padding-top: 4px;        
+        }
+        &__text {
+            margin-left: 10px;        
+            max-width: 250px;
+            p {
+                font-size: 14px;
+                line-height: 19px;
+            }               
+        }
+        &__arrow-btn {
+            width: 33.3px;    
+            height: 33.3px;    
+            img {
+                width: 16px;      
+                height: 27px;
+            }         
+        }
     }
 }

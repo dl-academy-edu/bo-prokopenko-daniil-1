@@ -19,13 +19,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 680px;
     display: none;
     z-index: 2;
     &__close-btn {
         position: absolute;
-        top: 0px;
-        right: -25px;
         cursor: pointer;
         background: transparent;
         border: none;
@@ -33,5 +30,33 @@
     }
     &_open {
         display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .popup-form {
+        width: 680px;
+        &__close-btn {
+            top: 0px;
+            right: -25px;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .popup-form {
+        width: 648px;
+        &__close-btn {
+            top: -25px;
+            right: 0px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .popup-form {
+        width: 335px;
+        &__close-btn {
+            top: -25px;
+            right: 0px;
+        }
     }
 }

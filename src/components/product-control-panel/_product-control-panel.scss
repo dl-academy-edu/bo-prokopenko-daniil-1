@@ -6,8 +6,6 @@ $transition: .4s;
     display: flex;
     &__wrapper {
         background-color: rgba(125, 151, 218, 0.2);
-        padding: 41px 0 28px;
-        margin-top: 50px;
     }
     &__fieldset {
         border: none;
@@ -15,16 +13,78 @@ $transition: .4s;
         margin: 0;
     }
     &__apply-btn {
-        width: 95px;
-        margin: 38px 60px;
+        width: 95px;   
         &-wrapper {
-            width: 200px;
         }
     }
     &__title-wrapper {
-        margin-bottom: 10px;
+
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .product-control-panel {
+        &__wrapper {
+            padding: 41px 0 28px;   //1200
+            margin-top: 50px;   //1200
+        }
+        &__apply-btn {
+            margin: 38px 60px;  //1200
+            &-wrapper {
+                width: 200px;   //1200
+            }
+        }
+        &__title-wrapper {
+            margin-bottom: 10px;  //1200
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .product-control-panel {
+        flex-wrap: wrap;
+        &__wrapper {
+            padding: 41px 0 28px;
+            margin-top: 30px;
+        }
+        &__apply-btn {
+            margin: 38px 0 0;
+            &-wrapper {
+                width: 200px;
+            }
+        }
+        &__title-wrapper {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .product-control-panel {
+        flex-wrap: wrap;
+        &__wrapper {
+            padding: 41px 0 28px;
+            margin-top: 20px;
+        }
+        &__fieldset {
+            margin-bottom: 20px;
+        }
+        &__apply-btn {
+            margin: 10px 120px 0;
+            &-wrapper {
+                width: 200px;
+            }
+        }
+        &__title-wrapper {
+            margin-bottom: 8px;
+        }
+        label {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
 
 /* Cost slider block */
 
@@ -47,11 +107,8 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
 }
 
 .cost-block {
-    width: 300px;
-    min-width: 230px;
     &__slider {
         -webkit-appearance: none;
-        width: 188px;
         background: transparent;
         &-wrapper {
             padding: 3px 4px;
@@ -108,9 +165,7 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
         }
     }
     &__value-limits {
-        width: 104px;
         &-wrapper {
-            padding: 9px 0;
             display: flex;
         }
         &:last-child {
@@ -119,20 +174,67 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .cost-block {
+        width: 300px;  //1200
+        min-width: 230px;   //1200
+        &__slider {
+            width: 188px;  //1200
+        }
+        &__value-limits {
+            width: 104px;  //1200
+            &-wrapper {
+                padding: 9px 0;  //1200
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .cost-block {
+        width: 270px;
+        min-width: 230px;
+        &__slider {
+            width: 184px;
+        }
+        &__value-limits {
+            width: 102px;
+            &-wrapper {
+                padding: 9px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .cost-block {
+        width: 335px;
+        min-width: 230px;
+        margin-bottom: 20px;
+        &__slider {
+            width: 184px;
+        }
+        &__value-limits {
+            width: 102px;
+            font-size: 14px;
+            line-height: 19px;
+            &-wrapper {
+                padding: 9px 0;
+            }
+        }
+
+    }
+}
+
+
 /* Color block */
 
 .color-block {
-    width: 200px;
-    min-width: 100px;
     input[type="checkbox"] {
         display: none;
     }
     &__label {
         display: block;
         background: url(../../static/images/checkbox.svg) no-repeat 0 0;
-        padding-left: 30px;
         cursor: pointer;
-        margin: 15px 0;
         &:hover {
             text-decoration: underline;
         }
@@ -145,13 +247,47 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .color-block {
+        width: 200px;  //1200
+        min-width: 100px;  //1200
+        &__label {
+            padding-left: 30px;  //1200
+            margin: 15px 0;  //1200
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .color-block {
+        width: 170px;
+        min-width: 100px; 
+        &__label {
+            padding-left: 30px;
+            margin: 15px 0;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .color-block {
+        width: 150px; 
+        min-width: 100px;
+        &__label {
+            padding-left: 28px;
+            margin: 10px 0;
+        }
+        &__label, 
+        & input[type="checkbox"]:checked + &__label, 
+        & input[type="checkbox"]:disabled + &__label {
+            background-size: 17px 17px;
+            background-position: 0px 1px;
+        }
+    }
+}
+
 /* Delivery block */
 
 .delivery-block {
-    width: 200px;
-    min-width: 150px;
     &__title-wrapper {
-        margin-bottom: 16px;
     }
     input[type="radio"] {
         display: none;
@@ -159,9 +295,7 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
     &__label {
         display: block;
         background: url(../../static/images/radio.svg) no-repeat 0 0;
-        padding-left: 30px;
         cursor: pointer;
-        margin: 10px 0;
         &:hover {
             text-decoration: underline;
         }
@@ -174,26 +308,65 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .delivery-block {
+        width: 200px;   //1200
+        min-width: 150px;    //1200
+        &__title-wrapper {
+            margin-bottom: 16px;    //1200
+        }
+        &__label {
+            padding-left: 30px;    //1200
+            margin: 10px 0;       //1200
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .delivery-block {
+        width: 200px;
+        min-width: 150px; 
+        &__title-wrapper {
+            margin-bottom: 16px;  
+        }
+        &__label {
+            padding-left: 30px; 
+            margin: 10px 0; 
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .delivery-block {
+        width: 150px; 
+        min-width: 150px; 
+        &__title-wrapper {
+            margin-bottom: 12px; 
+        }
+        &__label {
+            padding-left: 28px; 
+            margin: 12px 0;   
+        }
+        &__label,
+        & input[type="radio"]:checked + &__label,
+        & input[type="radio"]:disabled + &__label {
+            background-size: 16px 16px;
+            background-position: 0px 2px;
+        }
+    }
+}
+
 /* Amount block */
 
-.amount-block {
-    width: 240px;
-    min-width: 170px;
+.amount-block {  
     box-sizing: border-box;
     &__wrapper {
         display: flex;
-        margin-top: 16px;
     }
     input[type="radio"] {
         display: none;
     }
     &__label {
-        width: 80px;
-        height: 35px;
-        margin: 0 0;
         background-color:#fff;
         text-align: center;
-        line-height: 35px;
         transition: background-color $transition;
         &:hover {
             background-color: #EDDEEB;
@@ -201,5 +374,51 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
     }
     & input[type="radio"]:checked + &__label {
         background-color:#F3D0DB;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .amount-block {
+        width: 240px;    //1200
+        min-width: 170px;     //1200
+        &__wrapper {
+            margin-top: 16px;    //1200
+        }
+        &__label {
+            width: 80px;    //1200
+            height: 35px;     //1200
+            margin: 0 0;      //1200
+            line-height: 35px;     //1200
+        }   
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .amount-block {
+        width: 440px; 
+        min-width: 170px;
+        &__wrapper {
+            margin-top: 16px; 
+        }
+        &__label {
+            width: 80px;
+            height: 35px; 
+            margin: 0 0; 
+            line-height: 35px; 
+        }   
+    }
+}
+@media screen and (max-width: 767px) {
+    .amount-block {
+        width: 240px; 
+        min-width: 170px; 
+        &__wrapper {
+            margin-top: 16px;  
+        }
+        & &__label {
+            width: 80px;  
+            height: 29px;  
+            margin: 0 0;  
+            line-height: 29px; 
+        }   
     }
 }

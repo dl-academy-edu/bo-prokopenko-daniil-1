@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">    
     <title>Design Life Kids</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,11 +27,11 @@
                         "addition-class": "banner__btn banner-js" 
                         })
                 </div>
-                <img src="static/images/banner-ooh_noo.png" class="banner__logo-img" width="636" height="461" alt="Banner">                           
+                <img src="static/images/banner-ooh_noo.png" class="banner__logo-img" alt="Banner">                           
             </div>           
             <p class="banner__free-shipping">Free (continental) usa shipping on all orders of $100 usd or more!</p>            
         </section>
-        <section class="products container">
+        <section class="products container container-narrow-mobile">
             <h2>Category products</h2>
             <ul class="products__list">
                 @@include('product-category-item/index.html', {
@@ -60,9 +61,11 @@
             </ul>
             @@include('product-items-scroll/index.html')
         </section>        
-        <section class="delivery container">
-            <div>
-                <img src="static/images/delivery-portrait.png" width="480" height="559" alt="Portrait">
+        <section class="delivery container container-narrow-mobile">
+            <div class="delivery__portrait">
+                <img class="delivery__portrait-img-desctop" src="static/images/delivery-portrait-desctop.png" alt="Portrait">
+                <img class="delivery__portrait-img-tablet" src="static/images/delivery-portrait-tablet.png" alt="Portrait">
+                <img class="delivery__portrait-img-mobile" src="static/images/delivery-portrait-mobile.png" alt="Portrait">
             </div>
             <div class="delivery__wrapper">
                 <div >
@@ -73,8 +76,7 @@
                         Delivery
                     </li>
                     <li class="delivery__list-item">
-                        Guarantee
-                        
+                        Guarantee                        
                     </li>
                     <li class="delivery__list-item">
                         Credit                  
@@ -88,12 +90,12 @@
                     })
             </div>
         </section>
-        <div class="brands container">            
+        <div class="brands container container-narrow-mobile">            
             <ul class="outline brands__list">
-                <li class="brands__list-item"><a href="#"><img src="static/images/brands-mailru.svg" width="193" height="60" alt="Mail.ru"></a></li>
-                <li class="brands__list-item"><a href="#"><img src="static/images/brands-apple.svg" width="179" height="61" alt="Apple"></a></li>
-                <li class="brands__list-item"><a href="#"><img src="static/images/brands-eltex.svg" width="216" height="46" alt="Eltex"></a></li>
-                <li class="brands__list-item"><a href="#"><img src="static/images/brands-owox.svg" width="211" height="40" alt="Owox"></a></li>
+                <li class="brands__list-item brands__list-item-mailru"><a href="#"><img src="static/images/brands-mailru.svg" alt="Mail.ru"></a></li>
+                <li class="brands__list-item brands__list-item-apple"><a href="#"><img src="static/images/brands-apple.svg" alt="Apple"></a></li>
+                <li class="brands__list-item brands__list-item-eltex"><a href="#"><img src="static/images/brands-eltex.svg" alt="Eltex"></a></li>
+                <li class="brands__list-item brands__list-item-owox"><a href="#"><img src="static/images/brands-owox.svg" alt="Owox"></a></li>
             </ul>
         </div>
         <div class="about container">
@@ -122,7 +124,7 @@
                     </p>
                 </div>
                 <div class="about-contacts__map">                    
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1344.9690439823269!2d-122.33340919912241!3d47.60789351940776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab402255555%3A0x2403090dada9b694!2skcbf!5e0!3m2!1sru!2sru!4v1621594270492!5m2!1sru!2sru" width="483" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1344.9690439823269!2d-122.33340919912241!3d47.60789351940776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab402255555%3A0x2403090dada9b694!2skcbf!5e0!3m2!1sru!2sru!4v1621594270492!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>                            
             </section>
         </div>

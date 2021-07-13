@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Catalog</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,56 +13,52 @@
 <body>
     @@include('header/index.html')
     <main>
-        <section class="products container">
+        <section class="products container container-narrow-mobile">
             <h1>Category products</h1>
             @@include('breadcrumbs-first/index.html')
             @@include('breadcrumbs-last/index.html', {
                 "page-title": "Catalog"
             })
-            <div class="product__list-wrapper">
-                <ul class="products__list">
-                    @@include('product-category-item/index.html', {
-                        "link-url": "#",
-                        "item-title": "Apparel kids",
-                        "img-url": "/static/images/products-apparel_kids.png",
-                        "alt-text": ""
-                    })
-                    @@include('product-category-item/index.html', {
-                        "link-url": "#",
-                        "item-title": "Holiday Shop",
-                        "img-url": "/static/images/products-holiday_shop.png",
-                        "alt-text": ""
-                    })
-                    @@include('product-category-item/index.html', {
-                        "link-url": "/pages/catalog/detail.html",
-                        "item-title": "Toys",
-                        "img-url": "/static/images/products-toys.png",
-                        "alt-text": ""
-                    })
-                </ul>                    
-                <ul class="products__list">
-                    @@include('product-category-item/index.html', {
-                        "link-url": "#",
-                        "item-title": "Accessories",
-                        "img-url": "/static/images/products-accessories.png",
-                        "alt-text": ""
-                    })
-                    @@include('product-category-item/index.html', {
-                        "link-url": "#",
-                        "item-title": "Sale",
-                        "img-url": "/static/images/products-sale.png",
-                        "alt-text": ""
-                    })
-                    @@include('product-category-item/index.html', {
-                        "link-url": "#",
-                        "item-title": "Apparel Adults",
-                        "img-url": "/static/images/products-apparel_adults.png",
-                        "alt-text": ""
-                    })
-                </ul>  
-            </div>
+            <ul class="products__list">
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Apparel kids",
+                    "img-url": "/static/images/products-apparel_kids.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Holiday Shop",
+                    "img-url": "/static/images/products-holiday_shop.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "/pages/catalog/detail.html",
+                    "item-title": "Toys",
+                    "img-url": "/static/images/products-toys.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Accessories",
+                    "img-url": "/static/images/products-accessories.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Sale",
+                    "img-url": "/static/images/products-sale.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Apparel Adults",
+                    "img-url": "/static/images/products-apparel_adults.png",
+                    "alt-text": ""
+                })
+            </ul>
         </section>
-        <section class="product-description container">
+        <section class="product-description container container-narrow-mobile">
             <div class="product-description__wrapper">
                 <h2 class="product-description__title">Product Description</h2>
                 <p class="product-description__details">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
@@ -70,6 +67,7 @@
             </div>        
         </section>
     </main>
-    @@include('footer/index.html') 
+    @@include('footer/index.html')
+    <script src="scripts.js"></script>
 </body>
 </html>

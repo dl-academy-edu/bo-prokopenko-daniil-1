@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Toys</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,7 +13,7 @@
 <body>
     @@include('header/index.html')
     <main>
-        <section class="goods__title container">
+        <section class="goods__title container container-narrow-mobile">
             <h1>Toy for kids</h1>
             @@include('breadcrumbs-first/index.html')
             @@include('breadcrumbs-middle/index.html', {
@@ -61,5 +62,6 @@
         @@include('paging/index.html')
     </main>
     @@include('footer/index.html')
+    <script src="scripts.js"></script>
 </body>
 </html>

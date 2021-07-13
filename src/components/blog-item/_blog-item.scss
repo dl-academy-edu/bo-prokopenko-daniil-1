@@ -1,25 +1,78 @@
 .blog-item {
-    margin: 18px 10px 15px;
     display: block;
-    width: 380px;
     &__image {
         display: block;
     }
     &__date {
-        padding: 20px 0 8px;
-        margin: 0;
         color: #818181;
     }
     &__text {
-        font-size: 18px;
-        line-height: 25px;
-        padding: 15px 0 0;
-        margin: 0;
+        font-size: 18px;     //all except mobile
+        line-height: 25px;    //all except mobile
     }
     &__link {
         &:hover h6,
         &:active h6 {
             text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .blog-item {
+        margin: 18px 10px 15px;  //1200
+        width: 380px;  //1200
+        &__image {
+            width: 380px;  //1200
+            height: 220px;   //1200
+        }
+        &__date {
+            padding: 20px 0 8px;   //1200
+            margin: 0;              //1200
+        }
+        &__text {
+            padding: 15px 0 0;    //1200
+            margin: 0;       //1200	
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .blog-item {
+        margin: 18px 10px 15px;
+        width: 314px;
+        &__image {
+            width: 314px;
+            height: 182px;
+        }
+        &__date {
+            padding: 15px 0 3px;
+            margin: 0;
+        }
+        &__text {
+            padding: 10px 0 0;
+            margin: 0;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .blog-item {
+        margin: 18px 0px 15px;
+        width: 335px;
+        &__image {
+            width: 335px;
+            height: 194px;
+        }
+        &__date {
+            padding: 10px 0 2px;
+            margin: 0;
+            font-size: 14px;
+            line-height: 16px;       
+        }
+        &__text {
+            font-size: 16px;  
+            line-height: 22px;    
+            padding: 7px 0 0;    
+            margin: 0;       
         }
     }
 }

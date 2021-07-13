@@ -2,16 +2,49 @@
 
 .goods {
     &__title {
-        margin-top: 29px
     }
     &__container {
-        max-width: 1200px;
-        margin-top: 40px;
-        margin-bottom: 45px;
     }
     &__list {
         display: flex;
         flex-wrap: wrap;     
         padding: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .goods {
+        &__title {
+            margin-top: 29px  //1200
+        }
+        &__container {
+            max-width: 1200px;  //1200
+            margin-top: 40px;  //1200
+            margin-bottom: 45px;  //1200
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .goods {
+        &__title {
+            margin-top: 29px
+        }
+        &__container {
+            max-width: 678px;
+            margin-top: 40px;
+            margin-bottom: 45px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .goods {
+        &__title {
+            margin-top: 15px 
+        }
+        &__container {
+            max-width: 375px; 
+            margin-top: 40px; 
+            margin-bottom: 45px;
+        }
     }
 }
