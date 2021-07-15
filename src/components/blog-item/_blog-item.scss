@@ -22,7 +22,7 @@
     .blog-item {
         margin: 18px 10px 15px;  //1200
         width: 380px;  //1200
-        &__image {
+        &__image img {
             width: 380px;  //1200
             height: 220px;   //1200
         }
@@ -40,7 +40,7 @@
     .blog-item {
         margin: 18px 10px 15px;
         width: 314px;
-        &__image {
+        &__image img {
             width: 314px;
             height: 182px;
         }
@@ -58,7 +58,7 @@
     .blog-item {
         margin: 18px 0px 15px;
         width: 335px;
-        &__image {
+        &__image img {
             width: 335px;
             height: 194px;
         }
