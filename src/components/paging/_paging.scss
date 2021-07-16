@@ -1,0 +1,100 @@
+/* page selection */
+
+$transition: .4s;
+
+.page-selecting {
+    display: flex;
+    justify-content: space-between;
+    &__button {
+        background-color: #fff;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    &__radio-block {
+        display: flex;
+        input[type="radio"] {
+            display: none;
+        }
+    }
+    &__label {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            color: #DADADA;
+        } 
+    }
+    &__arrow {
+        transition: $transition;
+    }
+    & input[type="radio"]:checked + &__label {
+        color:#C29974;
+    }
+    &__button:hover &__arrow {
+        stroke: #C29974;
+        stroke-opacity: 1;
+    }
+    &__button:active &__arrow {
+        stroke: #C29974;
+        stroke-opacity: 0.5;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-selecting {
+        margin-bottom: 58px;   //1200
+        &__button {
+            width: 13px;    //1200
+            height: 26px;    //1200
+            svg {
+                width: 13px;
+                height: 26px;
+            }
+        }
+        &__label {
+            width: 75px;    //1200
+            height: 26px;     //1200
+            line-height: 30px;     //1200
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .page-selecting {
+        margin-bottom: 58px;
+        &__button {
+            width: 13px;
+            height: 26px;
+            svg {
+                width: 13px;
+                height: 26px;
+            }
+        }
+        &__label {
+            width: 75px;
+            height: 26px;
+            line-height: 26px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .page-selecting {
+        margin-bottom: 58px;
+        &__button {
+            width: 12px;
+            height: 24px;
+            svg {
+                width: 12px;
+                height: 24px;
+            }
+        }
+        &__label {
+            width: 62px;
+            height: 24px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}

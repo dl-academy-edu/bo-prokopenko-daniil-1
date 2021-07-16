@@ -1,0 +1,61 @@
+<div class="product-control-panel__wrapper">
+    <form class="product-control-panel container container-narrow-mobile">
+        <div class="product-control-panel__fieldset cost-block">
+            <div class="product-control-panel__title-wrapper">
+                <h5>Cost</h5>  
+            </div>
+            <div class="cost-block__slider-wrapper">
+                <input type="range" min="1" max="500" value="105" name="Cost" id="cost" class="cost-block__slider"> 
+            </div>                    
+            <div class="cost-block__value-limits-wrapper">
+                <div class="cost-block__value-limits">
+                    0
+                </div>
+                <div class="cost-block__value-limits">
+                    500
+                </div>
+            </div>                    
+        </div>
+        <div class="product-control-panel__fieldset color-block">
+            <div class="product-control-panel__title-wrapper">
+                <h5>Color</h5>
+            </div>                
+            <input type="checkbox" name="color" id="color-black" value="black" checked>
+            <label for="color-black" class="color-block__label">Black</label>
+            <input type="checkbox" name="color" id="color-blue" value="blue">
+            <label for="color-blue" class="color-block__label">Blue</label>
+            <input type="checkbox" name="color" id="color-green" value="green">
+            <label for="color-green" class="color-block__label">Green</label>
+            <input type="checkbox" name="color" id="color-white" value="white">
+            <label for="color-white" class="color-block__label">White</label>
+        </div>
+        <div class="product-control-panel__fieldset delivery-block">
+            <div class="product-control-panel__title-wrapper delivery-block__title-wrapper">
+                <h5>Delivery</h5>
+            </div>                
+            <input type="radio" name="shipping" id="delivery-free" value="free">
+            <label for="delivery-free" class="delivery-block__label">Free shipping</label>
+            <input type="radio" name="shipping" id="delivery-fast" value="free" checked>
+            <label for="delivery-fast" class="delivery-block__label">Fast shipping</label>
+        </div>
+        <div class="product-control-panel__fieldset amount-block">
+            <div class="product-control-panel__title-wrapper">
+                <h5>Amount</h5> 
+            </div>                
+            <div class="amount-block__wrapper">
+                <input type="radio" name="amount" id="amount-0-5" value="5" checked>
+                <label for="amount-0-5" class="amount-block__label">0-5</label>
+                <input type="radio" name="amount" id="amount-10-20" value="20">
+                <label for="amount-10-20" class="amount-block__label">10-20</label>
+                <input type="radio" name="amount" id="amount-20-50" value="50">
+                <label for="amount-20-50" class="amount-block__label">20-50</label>
+            </div>
+        </div>
+        <div class="product-control-panel__apply-btn-wrapper">
+            @@include('button/index.html', {
+                "text": "Apply",
+                "addition-class": "product-control-panel__apply-btn" 
+                })
+        </div>
+    </form>
+</div>
