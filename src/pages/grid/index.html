@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('head/index.html', {
+    "page-title": "Grid",
+    "style-url": "style.css"
+})
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="grid__title container container-narrow-mobile">
+          <h1>Grid</h1>
+          @@include('breadcrumbs-first/index.html')
+          @@include('breadcrumbs-last/index.html', {
+              "page-title": "Grid"
+          })
+        </section>
+        <div class="grid__wrapper">
+            <div class="grid__box grid__box-1">
+                <a class="grid__box-text-wrapper grid__box-1-text-wrapper" href="#>
+                    <p class="grid__box-text grid__box-1-text-1">IPHONE 6S</p>
+                    <p class="grid__box-text grid__box-1-text-2">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+                    <p class="grid__box-text grid__box-1-text-3">Learn more or visit an Apple Store today</p>
+                </a>
+            </div>
+            <div class="grid__box grid__box-10">
+                <div class="grid__box-img-wrapper grid__box-10-img-wrapper">
+                    <picture class="grid__box-img">                    
+                        <source media="screen and (min-width: 768px)" srcset="/static/images/grid-box-img-1-desctop.png, /static/images/grid-box-img-1-desctop@2x.png 2x" class="grid__box-img">
+                        <source media="screen and (max-width: 767px)" srcset="/static/images/grid-box-img-1-mobile.png, /static/images/grid-box-img-1-mobile@2x.png 2x" class="grid__box-img">
+                        <img src="/static/images/grid-box-img-1-desctop.png" alt="box-img-7" class="grid__box-img">
+                    </picture>
+                </div>
+            </div>
+            <div class="grid__box grid__box-2">
+                <a class="grid__box-text grid__box-2-text-1" href="#">Learn more</a>
+                <p class="grid__box-text grid__box-2-text-2">How to Use Rotary Evaporator in Chemical Labs</p>
+                <a class="grid__box-text grid__box-2-text-3" href="#">Download now</a>
+            </div>
+            <div class="grid__box grid__box-3">
+                <picture class="grid__box-img">
+                    <source srcset="/static/images/grid-box-img-3-desctop.png, /static/images/grid-box-img-3-desctop@2x.png 2x" class="grid__box-img">
+                    <img src="/static/images/grid-box-img-3-desctop.png" alt="box-img-3" class="grid__box-img">
+                </picture>
+                <p class="grid__box-text grid__box-3-text-1">Our Brand New Keyboard</p>
+                <a class="grid__box-text grid__box-3-text-2" href="#">Learn ›</a>
+            </div>
+            <div class="grid__box grid__box-4">
+                    <p class="grid__box-text grid__box-4-text-1">Imac.Retina</p>
+                    <p class="grid__box-text grid__box-4-text-2">Hardly a month passes these days where</p>
+                        <picture class="grid__box-img">
+                            <source media="screen and (min-width: 1200px)" srcset="/static/images/grid-box-img-4-desctop.png, /static/images/grid-box-img-4-desctop@2x.png 2x" class="grid__box-img">
+                            <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/static/images/grid-box-img-4-tablet.png, /static/images/grid-box-img-4-tablet@2x.png 2x" class="grid__box-img">
+                            <source media="screen and (max-width: 767px)" srcset="/static/images/grid-box-img-4-mobile.png, /static/images/grid-box-img-4-mobile@2x.png 2x" class="grid__box-img">
+                            <img src="/static/images/grid-box-img-4-tablet.png" alt="box-img-4" class="grid__box-img">
+                        </picture>
+            </div>
+            <div class="grid__box grid__box-11">
+                    <p class="grid__box-text grid__box-11-text-1">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
+                    <a class="grid__box-text grid__box-11-text-2" href="#">Download Now ›</a>
+            </div>
+            <div class="grid__box grid__box-5">
+                <picture class="grid__box-img">
+                    <source srcset="/static/images/grid-box-img-5-desctop.png, /static/images/grid-box-img-5-desctop@2x.png 2x" class="grid__box-img">
+                    <img src="/static/images/grid-box-img-5-desctop.png" alt="box-img-5" class="grid__box-img">
+                </picture> 
+                <p class="grid__box-text grid__box-5-text-1">iCloud</p>
+                <p class="grid__box-text grid__box-5-text-2">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+                <a class="grid__box-text grid__box-5-text-3" href="#">LEARN MORE</a>
+            </div>
+            <div class="grid__box grid__box-6">
+                <p class="grid__box-text grid__box-6-text-1">Best Choice</p>
+                <p class="grid__box-text grid__box-6-text-2">Much MuchBetter Experience</p>
+                <picture class="grid__box-img">                    
+                    <source media="screen and (min-width: 1200px)" srcset="/static/images/grid-box-img-6-desctop.png, /static/images/grid-box-img-6-desctop@2x.png 2x" class="grid__box-img">
+                    <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="/static/images/grid-box-img-6-tablet.png, /static/images/grid-box-img-6-tablet@2x.png 2x" class="grid__box-img">
+                    <source media="screen and (max-width: 767px)" srcset="/static/images/grid-box-img-6-mobile.png, /static/images/grid-box-img-6-mobile@2x.png 2x" class="grid__box-img">
+                    <img src="/static/images/grid-box-img-6-desctop.png" alt="box-img-6" class="grid__box-img">
+                </picture>
+            </div>
+            <div class="grid__box grid__box-7">
+                <picture class="grid__box-img">
+                    <source srcset="/static/images/grid-box-img-7-desctop.png, /static/images/grid-box-img-7-desctop@2x.png 2x" class="grid__box-img">
+                    <img src="/static/images/grid-box-img-7-desctop.png" alt="box-img-7" class="grid__box-img">
+                </picture> 
+                <p class="grid__box-text grid__box-7-text-1">Games ourpasion</p>
+                <a class="grid__box-text grid__box-7-text-2" href="#">LEARN ›</a>
+            </div>
+            <div class="grid__box grid__box-8">
+                <img src="/static/images/grid-box-img-8.svg" alt="box-img-8">
+                <a class="grid__box-text grid__box-8-text-1" href="#">Follow me ›</a>
+            </div>
+            <div class="grid__box grid__box-9">
+                <div class="grid__box-9-img-wrapper">
+                    <picture class="grid__box-img">                    
+                        <source media="screen and (min-width: 768px)" srcset="/static/images/grid-box-img-9-desctop.png, /static/images/grid-box-img-9-desctop@2x.png 2x" class="delivery__portrait-img-desctop">
+                        <source media="screen and (max-width: 767px)" srcset="/static/images/grid-box-img-9-mobile.png, /static/images/grid-box-img-9-mobile@2x.png 2x" class="delivery__portrait-img-mobile">
+                        <img src="/static/images/grid-box-img-9-desctop.png" alt="box-img-7" class="grid__box-img">
+                    </picture>
+                </div>
+                <div class="grid__box-9-text-wrapper">
+                    <p class="grid__box-text grid__box-9-text-1">More than just a display,  it’s a vision</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('footer/index.html')
+    @@include('modal-window/index.html')
+    <script src="script.js"></script>
+</body>
+</html>

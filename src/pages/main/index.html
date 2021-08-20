@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">    
-    <title>Design Life Kids</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="/common.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+@@include('head/index.html', {
+    "page-title": "Design Life Kids",
+    "style-url": "style.css"
+})
 <body>
     @@include('header/index.html')
     <main>
@@ -30,7 +24,7 @@
                 <!-- <img src="static/images/banner-ooh_noo.png" class="banner__logo-img" alt="Banner">                          -->
                 <picture>
                     <source srcset="static/images/banner-ooh_noo.png, static/images/banner-ooh_noo@2x.png 2x" class="banner__logo-img">
-                    <img srcset="static/images/banner-ooh_noo.png, static/images/banner-ooh_noo@2x.png 2x" class="banner__logo-img" alt="Banner"> 
+                    <img src="static/images/banner-ooh_noo.png" class="banner__logo-img" alt="Banner"> 
                 </picture>
             </div>           
             <p class="banner__free-shipping">Free (continental) usa shipping on all orders of $100 usd or more!</p>            

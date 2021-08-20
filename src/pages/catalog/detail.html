@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Toys</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="/common.css">
-    <link rel="stylesheet" href="detail.css">
-</head>
+@@include('head/index.html', {
+    "page-title": "Toys",
+    "style-url": "detail.css"
+})
 <body>
     @@include('header/index.html')
     <main>
