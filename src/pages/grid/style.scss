@@ -19,7 +19,7 @@
             &-wrapper {
                 height: 100%;
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 align-items: flex-end;
             }
         }
@@ -148,7 +148,7 @@
             position: relative;
             background-color: #93B7B7;
             flex-direction: column;
-            justify-content: end;
+            justify-content: flex-end;
             &-text-1 {
                 box-sizing: border-box;
                 position: absolute;
@@ -210,7 +210,7 @@
         }
         &-11 {
             flex-direction: column;
-            justify-content: start;
+            justify-content: flex-start;
             align-items: flex-start;
             &-text-1 {
                 // padding-top: 90px;

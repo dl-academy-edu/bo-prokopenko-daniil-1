@@ -3,8 +3,6 @@ $transition: .4s;
 .goods-item {
     display: block;
     position: relative;
-    &__wrapper {
-    }
     &__button-wrapper {
         box-sizing: border-box;
     }
@@ -51,34 +49,34 @@ $transition: .4s;
 @media screen and (min-width: 1200px) {
     .goods-item {
         &__wrapper {
-            margin: 20px 10px;   // 1200
+            margin: 20px 10px;
         }
         &__button-wrapper {
-            width: 380px;   // 1200
-            height: 385px;   // 1200
-            padding: 89px 0;    // 1200
+            width: 380px;
+            height: 385px;
+            padding: 89px 0;
         }
         &__picture img {
             width: 380px;
             height: 385px;
         }
         &__button {
-            width: 207px;  // 1200
-            height: 207px;  // 1200
-            font-size: 29px;  // 1200
-            line-height: 207px;   // 1200
+            width: 207px;
+            height: 207px;
+            font-size: 29px;
+            line-height: 207px;
 
         }
         &__title {
-            font-size: 14px;  // 1200
-            line-height: 19px;  // 1200
-            padding: 10px 0;  // 1200
-            margin: 20px 0 0 0;  // 1200
+            font-size: 14px;
+            line-height: 19px;
+            padding: 10px 0;
+            margin: 20px 0 0 0;
             width: 380px
         }
         &__price {
-            padding: 6px 0;  // 1200
-            margin: 0;  // 1200
+            padding: 6px 0;
+            margin: 0;
         }
     }
 }
@@ -154,6 +152,3 @@ $transition: .4s;
         }
     }
 }
-
-
-

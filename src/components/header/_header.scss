@@ -62,7 +62,6 @@ $active-opacity: 20%;
         }
     }
     &__button-magnifier {
-        // width: 60px;
         border: none;
         background-color: white;
         cursor: pointer;
@@ -82,19 +81,14 @@ $active-opacity: 20%;
             &-wrapper {
                 width: 100%;
                 display: none;
-                // display: flex; 
                 flex-direction: column;
                 position: absolute;
-                top: 80px;    // set 70px to mobile
+                top: 80px;
                 z-index: 2;
                 text-align: center;
-                // opacity: 0%;
-                // transform: translateX(-100%);
                 transition: $transition;
                 &_open {
                     display: flex;
-                    // opacity: 100%;
-                    // transform: translateX(0%);
                 }
             }
             &-open-btn {
@@ -111,14 +105,10 @@ $active-opacity: 20%;
                 &:active {
                     opacity: $active-opacity;
                 }
-
-
                 display: block;
                 &_open {
                     display: none;
                 }
-
-
             }
             &-close-btn {
                 border: none;
@@ -137,13 +127,14 @@ $active-opacity: 20%;
                 &_open {
                     display: block;
                 }
-
-
             }
             &-list-item {
                 line-height: 22px;
                 margin: 10px;
                 cursor: pointer;
+                a {
+                    text-transform: uppercase;
+                }
                 &:hover {
                     opacity: $hover-opacity;
                 }
@@ -158,18 +149,20 @@ $active-opacity: 20%;
                 &_open {
                     display: block;
                 }
-                // z-index: 3;
             }
         }
         &__contact-us {
             font-weight: 700;
             transition: opacity $transition;
             background-color: white;
-            a:hover {
-                opacity: $hover-opacity;
-            }
-            a:active {
-                opacity: $active-opacity;
+            a {
+                text-transform: uppercase;
+                &:hover {
+                    opacity: $hover-opacity;
+                }
+                &:active {
+                    opacity: $active-opacity;
+                }
             }
             padding: 15px 0;
         }
@@ -242,7 +235,7 @@ $active-opacity: 20%;
         &-mobile {
             &__popup-menu {
                 &-wrapper {
-                    top: 70px;    // set 70px to mobile
+                    top: 70px;
                 }
             }
         }
