@@ -7,14 +7,14 @@
 <body>
     @@include('header/index.html')
     <main>
-        <section class="contacts container">
+        <section class="contacts container container-narrow-mobile">
             <h1 class="contacts__title">Contact us</h1>
             @@include('breadcrumbs-first/index.html')
             @@include('breadcrumbs-last/index.html', {
                 "page-title": "Contact Us"
             })
         </section>
-        <div class="contacts__wrapper container">        
+        <div class="contacts__wrapper container container-narrow-mobile">        
             @@include('contact-form/index.html', {
                 "placeholder-name": "Ivan Ivanov"
             })
