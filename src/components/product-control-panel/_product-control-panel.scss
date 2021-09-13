@@ -13,9 +13,7 @@ $transition: .4s;
         margin: 0;
     }
     &__apply-btn {
-        width: 95px;   
-        &-wrapper {
-        }
+        width: 95px;
     }
 }
 
@@ -286,8 +284,6 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
 /* Delivery block */
 
 .delivery-block {
-    &__title-wrapper {
-    }
     input[type="radio"] {
         display: none;
     }
