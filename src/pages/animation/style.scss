@@ -80,7 +80,7 @@ html {
     }
 }
 
-@keyframes man-message {
+@keyframes man-message-1 {
     0% {
         opacity: 0;
     }
@@ -95,6 +95,24 @@ html {
     }
     70% {
         opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes man-message-2 {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 100%;
+    }
+    95% {
+        opacity: 100%;
     }
     100% {
         opacity: 0;
@@ -339,12 +357,17 @@ html {
             left: -10px;
             top: -85px;
             z-index: 2;
-            animation: man-message 10s linear 1 forwards;
             &::after {
                 top: 47px;
                 left: 10px;
                 z-index: 2;
             }
-        }     
+            &-1 {
+                animation: man-message-1 10s linear 1 forwards;
+            }
+            &-2 {
+                animation: man-message-2 10s linear 1 forwards;
+            }
+        }    
     }
 }
