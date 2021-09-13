@@ -1,0 +1,37 @@
+$transition: .4s;
+
+.button {
+    background: #1E0606;
+    color: #fff;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-style: normal;        
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    padding: 9px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0;
+    height: 40px;
+    transition: background-color $transition;
+    &:hover {
+        background: #C29974;
+    }
+    &:active {
+        background: #CFAF91;
+    }
+    &:disabled {
+        background: #C1C1C1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .button {
+        font-size: 14px;
+        line-height: 19px;
+        height: 36px;
+    }
+}

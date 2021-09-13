@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="style.css">
+</head> -->
+
+@@include('head/index.html', {
+    "page-title": "Catalog",
+    "style-url": "style.css"
+})
+
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="products container container-narrow-mobile">
+            <h1>Category products</h1>
+            @@include('breadcrumbs-first/index.html')
+            @@include('breadcrumbs-last/index.html', {
+                "page-title": "Catalog"
+            })
+            <ul class="products__list">
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Apparel kids",
+                    "img-url": "/static/images/products-apparel_kids.png",
+                    "img2x-url": "/static/images/products-apparel_kids@2x.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Holiday Shop",
+                    "img-url": "/static/images/products-holiday_shop.png",
+                    "img2x-url": "/static/images/products-holiday_shop@2x.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "/pages/catalog/detail.html",
+                    "item-title": "Toys",
+                    "img-url": "/static/images/products-toys.png",
+                    "img2x-url": "/static/images/products-toys@2x.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Accessories",
+                    "img-url": "/static/images/products-accessories.png",
+                    "img2x-url": "/static/images/products-accessories@2x.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Sale",
+                    "img-url": "/static/images/products-sale.png",
+                    "img2x-url": "/static/images/products-sale@2x.png",
+                    "alt-text": ""
+                })
+                @@include('product-category-item/index.html', {
+                    "link-url": "#",
+                    "item-title": "Apparel Adults",
+                    "img-url": "/static/images/products-apparel_adults.png",
+                    "img2x-url": "/static/images/products-apparel_adults@2x.png",
+                    "alt-text": ""
+                })
+            </ul>
+        </section>
+        <section class="product-description container container-narrow-mobile">
+            <div class="product-description__wrapper">
+                <h2 class="product-description__title">Product Description</h2>
+                <p class="product-description__details">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+                <p class="product-description__details">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+                <p class="product-description__details">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+            </div>        
+        </section>
+    </main>
+    @@include('footer/index.html')
+    <script src="scripts.js"></script>
+</body>
+</html>

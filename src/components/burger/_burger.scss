@@ -1,0 +1,41 @@
+$transition: .4s;
+
+.burger {
+    input[type="radio"] {
+        display: none;
+    }
+    &__label {
+        display: block;
+        width: 31px;
+        height: 3px;
+        margin: 0 0 11px 0;
+        background-color:#D6CAC2;
+        cursor: pointer;
+        transition: $transition;
+        &:hover,
+        &:active {
+            background-color:#725F5B;
+        }
+    }
+    & input[type="radio"]:checked + &__label  {
+        background-color:#725F5B;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .burger {
+        padding-left: 2px;
+    } 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .burger {
+        padding-left: 2px;
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    .burger {
+        padding-right: 2px;
+    } 
+}

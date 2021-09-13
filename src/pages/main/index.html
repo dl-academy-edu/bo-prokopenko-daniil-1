@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('head/index.html', {
+    "page-title": "Design Life Kids",
+    "style-url": "style.css"
+})
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="banner container">
+            <div class="banner__logo-block">
+                <div class="banner__burger">
+                    <div class="banner__page-number">01</div>
+                    <div class="banner__page-number banner__page-number-hidden">02</div>
+                    <div class="banner__page-number banner__page-number-hidden">03</div>
+                    <div class="banner__page-number banner__page-number-hidden">04</div>
+                    @@include('burger/index.html')
+                </div>
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "" 
+                })
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "banner-logo-slide_hidden" 
+                })
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "banner-logo-slide_hidden" 
+                })
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "banner-logo-slide_hidden" 
+                })
+            </div>           
+            <p class="banner__free-shipping">Free (continental) usa shipping on all orders of $100 usd or more!</p>            
+        </section>
+        <section class="products container container-narrow-mobile">
+            <h2>Category products</h2>
+            <div class="products__list-wrapper">
+                <ul class="products__list">
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Apparel kids",
+                        "img-url": "/static/images/products-apparel_kids.png",
+                        "img2x-url": "/static/images/products-apparel_kids@2x.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Holiday Shop",
+                        "img-url": "/static/images/products-holiday_shop.png",
+                        "img2x-url": "/static/images/products-holiday_shop@2x.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "/pages/catalog/detail.html",
+                        "item-title": "Toys",
+                        "img-url": "/static/images/products-toys.png",
+                        "img2x-url": "/static/images/products-toys@2x.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Accessories",
+                        "img-url": "/static/images/products-accessories.png",
+                        "img2x-url": "/static/images/products-accessories@2x.png",
+                        "alt-text": ""
+                    })
+                </ul>
+            </div>
+            @@include('product-items-scroll/index.html')
+        </section>        
+        <section class="delivery container container-narrow-mobile">
+            <div class="delivery__portrait-crop">
+                <picture class="delivery__portrait">
+                    <source media="screen and (min-width: 1200px)" srcset="static/images/delivery-portrait-desctop.png, static/images/delivery-portrait-desctop@2x.png 2x" class="delivery__portrait">
+                    <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="static/images/delivery-portrait-tablet.png, static/images/delivery-portrait-tablet@2x.png 2x" class="delivery__portrait">
+                    <source media="screen and (max-width: 767px)" srcset="static/images/delivery-portrait-mobile.png, static/images/delivery-portrait-mobile@2x.png 2x" class="delivery__portrait">
+                    <img class="delivery__portrait" src="static/images/delivery-portrait-desctop.png" alt="Portrait">
+                </picture>
+            </div>
+            <div class="delivery__wrapper">
+                <h2 class="delivery__title">Delivery</h2>
+                <ul class="outline delivery__list">
+                    <li class="delivery__list-item delivery__list-item_selected">Delivery</li>
+                    <li class="delivery__list-item">Guarantee</li>
+                    <li class="delivery__list-item">Credit</li>
+                </ul>
+                <p class="delivery__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                <p class="delivery__text">What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
+                @@include('button/index.html', {
+                    "text": "Learn more",
+                    "addition-class": "delivery__learn-more-btn" 
+                    })
+            </div>
+        </section>
+        <div class="brands container container-narrow-mobile">            
+            <ul class="outline brands__list">
+                <li class="brands__list-item brands__list-item-mailru"><a href="#"><img src="static/images/brands-mailru.svg" alt="Mail.ru"></a></li>
+                <li class="brands__list-item brands__list-item-apple"><a href="#"><img src="static/images/brands-apple.svg" alt="Apple"></a></li>
+                <li class="brands__list-item brands__list-item-eltex"><a href="#"><img src="static/images/brands-eltex.svg" alt="Eltex"></a></li>
+                <li class="brands__list-item brands__list-item-owox"><a href="#"><img src="static/images/brands-owox.svg" alt="Owox"></a></li>
+            </ul>
+        </div>
+        <div class="about container">
+            <section class="about-design">
+                <h2 class="about__title about-design__title">Design life kids</h2>
+                <div class="about-design__wrapper">
+                    <a href="#">About Us</a>
+                    <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>                    
+                    @@include('button/index.html', {
+                        "text": "Buy now",
+                        "addition-class": "about-design__buy-now-btn" 
+                        })
+                </div>                
+            </section>        
+            <section class="about-contacts">
+                <h2 class="about__title about-contacts__title">Contacts</h2>
+                <p class="about-contacts__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                <iframe class="about-contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1344.9690439823269!2d-122.33340919912241!3d47.60789351940776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab402255555%3A0x2403090dada9b694!2skcbf!5e0!3m2!1sru!2sru!4v1621594270492!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+        </div>
+    </main>
+    @@include('footer/index.html')
+    @@include('modal-window/index.html')
+    <script src="scripts.js"></script>
+</body>
+</html>

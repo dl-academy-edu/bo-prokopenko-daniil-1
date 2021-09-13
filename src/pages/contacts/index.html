@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('head/index.html', {
+    "page-title": "Contact us",
+    "style-url": "style.css"
+})
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="contacts container container-narrow-mobile">
+            <h1 class="contacts__title">Contact us</h1>
+            @@include('breadcrumbs-first/index.html')
+            @@include('breadcrumbs-last/index.html', {
+                "page-title": "Contact Us"
+            })
+        </section>
+        <div class="contacts__wrapper container container-narrow-mobile">        
+            @@include('contact-form/index.html', {
+                "placeholder-name": "Ivan Ivanov"
+            })
+            <div class="support">
+                <p class="support__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+                <p class="support__text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+                <p class="support__statement">An expert is waiting to help you!</p>
+            </div>
+        </div>
+    </main>
+    @@include('footer/index.html')
+    <script src="scripts.js"></script>
+</body>
+</html>

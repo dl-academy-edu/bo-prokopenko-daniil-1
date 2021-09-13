@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('head/index.html', {
+    "page-title": "Toys",
+    "style-url": "detail.css"
+})
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="goods__title container container-narrow-mobile">
+            <h1>Toy for kids</h1>
+            @@include('breadcrumbs-first/index.html')
+            @@include('breadcrumbs-middle/index.html', {
+                "page-url": "../catalog/index.html",
+                "page-title": "Catalog"
+            })
+            @@include('breadcrumbs-last/index.html', {
+                "page-title": "Toys"
+            })
+        </section>
+        @@include('product-control-panel/index.html')
+        <div class="container goods__container">
+            <ul class="goods__list">
+                @@include('goods-item/index.html', {
+                    "img-url": "../../static/images/goods-1.png",
+                    "img2x-url": "../../static/images/goods-1@2x.png",
+                    "alt-text": "",
+                    "title": "Sharky bean bag chair cover",
+                    "price": "60.00"
+                })
+                @@include('goods-item/index.html', {
+                    "img-url": "../../static/images/goods-2.png",
+                    "img2x-url": "../../static/images/goods-2@2x.png",
+                    "alt-text": "",
+                    "title": "Brass deco frames",
+                    "price": "66.00"
+                })
+                @@include('goods-item/index.html', {
+                    "img-url": "../../static/images/goods-3.png",
+                    "img2x-url": "../../static/images/goods-3@2x.png",
+                    "alt-text": "",
+                    "title": "Cibo full apron",
+                    "price": "60.00"
+                })
+                @@include('goods-item/index.html', {
+                    "img-url": "../../static/images/goods-4.png",
+                    "img2x-url": "../../static/images/goods-4@2x.png",
+                    "alt-text": "",
+                    "title": "Gatcha gatcha gumball machine",
+                    "price": "56.00"
+                })
+                @@include('goods-item/index.html', {
+                    "img-url": "../../static/images/goods-5.png",
+                    "img2x-url": "../../static/images/goods-5@2x.png",
+                    "alt-text": "",
+                    "title": "Christmas advent scented candle",
+                    "price": "29.00"
+                })
+                @@include('goods-item/index.html', {
+                    "img-url": "../../static/images/goods-6.png",
+                    "img2x-url": "../../static/images/goods-6@2x.png",
+                    "alt-text": "",
+                    "title": "Tangle spinning tea light",
+                    "price": "56.00"
+                })
+            </ul>
+        </div>
+        @@include('paging/index.html')
+    </main>
+    @@include('footer/index.html')
+    <script src="scripts.js"></script>
+</body>
+</html>
