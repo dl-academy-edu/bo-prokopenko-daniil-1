@@ -27,6 +27,15 @@
         background: transparent;
         border: none;
         padding: 0;
+        path {
+           transition: .4s; 
+        }
+        &:hover path {
+            opacity: 50%;
+        }
+        &:active path {
+            opacity: 30%;
+        }
     }
     &_open {
         display: block;

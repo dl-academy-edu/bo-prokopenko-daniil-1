@@ -1,43 +1,45 @@
 .product-category-item {
-    &__wrapper {
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;     
-        justify-content: center;
-        align-items: center;
-    }    
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;     
+    justify-content: center;
+    align-items: center;  
     &__title {
+        margin: auto;
+        position: absolute;
         text-align: center;
-        z-index: 1;   
+        // z-index: 1;
+        // color: cadetblue;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
     }
     &__picture {
         display: block;
-        position: absolute;
+        // position: absolute;
         img {
             display: block;
         }
     }
     &__link {
-        &:hover,
-        &:active {
+        position: relative;
+        &:hover h3,
+        &:active h3 {
             text-decoration: underline;
             color: #ffffff;
         }
     }
 }
 
-
-
 @media screen and (min-width: 1200px) {
     .product-category-item {
-        &__wrapper {
-            padding: 20px;    // to 1200+
-            width: 280px; // to 1200+
-            height: 270px; // to 1200+
-            margin: 0 10px 23px; // to 1200+
-        }
+        padding: 20px;
+        width: 280px;
+        height: 270px;
+        margin: 0 10px 23px;
         &__title {
-            max-width: 80%;   // to 1200+
+            max-width: 80%;
         }
         &__picture {
             img {
@@ -50,12 +52,10 @@
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .product-category-item {
-        &__wrapper {
-            padding: 16px;   
-            width: 258px; 
-            height: 249px; 
-            margin: 0 10px 23px; 
-        }
+        padding: 16px;   
+        width: 258px; 
+        height: 249px; 
+        margin: 0 10px 23px; 
         &__title {
             max-width: 80%;
         }
@@ -70,12 +70,10 @@
 
 @media screen and (max-width: 767px) {
     .product-category-item {
-        &__wrapper {
-            padding: 20px;    
-            width: 247px; 
-            height: 238px; 
-            margin: 0 8px 16px; 
-        }
+        padding: 20px;    
+        width: 247px; 
+        height: 238px; 
+        margin: 0 8px 16px; 
         &__title {
             max-width: 85%;   
             }

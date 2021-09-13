@@ -8,67 +8,74 @@
     @@include('header/index.html')
     <main>
         <section class="banner container">
-            <div class="banner__burger-wrapper">
+            <div class="banner__logo-block">
                 <div class="banner__burger">
                     <div class="banner__page-number">01</div>
+                    <div class="banner__page-number banner__page-number-hidden">02</div>
+                    <div class="banner__page-number banner__page-number-hidden">03</div>
+                    <div class="banner__page-number banner__page-number-hidden">04</div>
                     @@include('burger/index.html')
                 </div>
-                <div class="banner__title-block">
-                    <h1>The ooh noo collection</h1>
-                    <p class="banner__designed">Designed in Slovenia</p>                    
-                    @@include('button/index.html', {
-                        "text": "Explore now",
-                        "addition-class": "banner__btn banner-js" 
-                        })
-                </div>
-                <picture>
-                    <source srcset="static/images/banner-ooh_noo.png, static/images/banner-ooh_noo@2x.png 2x" class="banner__logo-img">
-                    <img src="static/images/banner-ooh_noo.png" class="banner__logo-img" alt="Banner"> 
-                </picture>
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "" 
+                })
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "banner-logo-slide_hidden" 
+                })
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "banner-logo-slide_hidden" 
+                })
+                @@include('banner-logo-slide/index.html', {
+                    "addition-class": "banner-logo-slide_hidden" 
+                })
             </div>           
             <p class="banner__free-shipping">Free (continental) usa shipping on all orders of $100 usd or more!</p>            
         </section>
         <section class="products container container-narrow-mobile">
             <h2>Category products</h2>
-            <ul class="products__list">
-                @@include('product-category-item/index.html', {
-                    "link-url": "#",
-                    "item-title": "Apparel kids",
-                    "img-url": "/static/images/products-apparel_kids.png",
-                    "img2x-url": "/static/images/products-apparel_kids@2x.png",
-                    "alt-text": ""
-                })
-                @@include('product-category-item/index.html', {
-                    "link-url": "#",
-                    "item-title": "Holiday Shop",
-                    "img-url": "/static/images/products-holiday_shop.png",
-                    "img2x-url": "/static/images/products-holiday_shop@2x.png",
-                    "alt-text": ""
-                })
-                @@include('product-category-item/index.html', {
-                    "link-url": "/pages/catalog/detail.html",
-                    "item-title": "Toys",
-                    "img-url": "/static/images/products-toys.png",
-                    "img2x-url": "/static/images/products-toys@2x.png",
-                    "alt-text": ""
-                })
-                @@include('product-category-item/index.html', {
-                    "link-url": "#",
-                    "item-title": "Accessories",
-                    "img-url": "/static/images/products-accessories.png",
-                    "img2x-url": "/static/images/products-accessories@2x.png",
-                    "alt-text": ""
-                })
-            </ul>
+            <div class="products__list-wrapper">
+                <ul class="products__list">
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Apparel kids",
+                        "img-url": "/static/images/products-apparel_kids.png",
+                        "img2x-url": "/static/images/products-apparel_kids@2x.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Holiday Shop",
+                        "img-url": "/static/images/products-holiday_shop.png",
+                        "img2x-url": "/static/images/products-holiday_shop@2x.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "/pages/catalog/detail.html",
+                        "item-title": "Toys",
+                        "img-url": "/static/images/products-toys.png",
+                        "img2x-url": "/static/images/products-toys@2x.png",
+                        "alt-text": ""
+                    })
+                    @@include('product-category-item/index.html', {
+                        "link-url": "#",
+                        "item-title": "Accessories",
+                        "img-url": "/static/images/products-accessories.png",
+                        "img2x-url": "/static/images/products-accessories@2x.png",
+                        "alt-text": ""
+                    })
+                </ul>
+            </div>
             @@include('product-items-scroll/index.html')
         </section>        
         <section class="delivery container container-narrow-mobile">
-            <picture class="delivery__portrait">
-                <source media="screen and (min-width: 1200px)" srcset="static/images/delivery-portrait-desctop.png, static/images/delivery-portrait-desctop@2x.png 2x" class="delivery__portrait-img-desctop">
-                <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="static/images/delivery-portrait-tablet.png, static/images/delivery-portrait-tablet@2x.png 2x" class="delivery__portrait-img-tablet">
-                <source media="screen and (max-width: 767px)" srcset="static/images/delivery-portrait-mobile.png, static/images/delivery-portrait-mobile@2x.png 2x" class="delivery__portrait-img-mobile">
-                <img class="delivery__portrait-img-desctop" src="static/images/delivery-portrait-desctop.png" alt="Portrait">
-            </picture>
+            <div class="delivery__portrait-crop">
+                <picture class="delivery__portrait">
+                    <source media="screen and (min-width: 1200px)" srcset="static/images/delivery-portrait-desctop.png, static/images/delivery-portrait-desctop@2x.png 2x" class="delivery__portrait">
+                    <source media="screen and (min-width: 768px) and (max-width: 1199px)" srcset="static/images/delivery-portrait-tablet.png, static/images/delivery-portrait-tablet@2x.png 2x" class="delivery__portrait">
+                    <source media="screen and (max-width: 767px)" srcset="static/images/delivery-portrait-mobile.png, static/images/delivery-portrait-mobile@2x.png 2x" class="delivery__portrait">
+                    <img class="delivery__portrait" src="static/images/delivery-portrait-desctop.png" alt="Portrait">
+                </picture>
+            </div>
             <div class="delivery__wrapper">
                 <h2 class="delivery__title">Delivery</h2>
                 <ul class="outline delivery__list">

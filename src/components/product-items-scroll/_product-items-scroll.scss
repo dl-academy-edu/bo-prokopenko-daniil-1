@@ -22,12 +22,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: 0.4s;
         img {
             display: block;
         }
+        &:hover {
+            background: rgba(112, 187, 220, 0.3);
+        }
+        &:active {
+            background: rgba(112, 187, 220, 0.5);
+        }
     }
 }
-
 
 @media screen and (min-width: 1200px) {
     .product-items-scroll {

@@ -10,13 +10,13 @@
 
 @media screen and (min-width: 1200px) {
     .blogs {
-        margin-bottom: 32px;    //1200
+        margin-bottom: 32px;
         &__container-stretch {
-            max-width: 1200px;    //1200
+            max-width: 1200px;
         }
         &-title {
-            margin-top: 29px;    //1200
-            margin-bottom: 30px;    //1200
+            margin-top: 29px;
+            margin-bottom: 30px;
         }
     }	
 }
@@ -24,7 +24,8 @@
     .blogs {
         margin-bottom: 15px; 
         &__container-stretch {
-            max-width: 668px;  
+            // max-width: 668px;
+            width: 85.5%  
         }
         &-title {
             margin-top: 29px; 
@@ -36,7 +37,7 @@
     .blogs {
         margin-bottom: 10px; 
         &__container-stretch {
-            max-width: 335px;  
+            // max-width: 335px;  
         }
         &-title {
             margin-top: 15px;  

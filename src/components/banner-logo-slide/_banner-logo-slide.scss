@@ -1,0 +1,84 @@
+.banner-logo-slide {
+    width: 100%;
+    // background-color: cadetblue;
+    &__designed {
+        font-family: "Crimson Text", "Times New Roman", serif;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 400;
+        margin: 17px 0 19px;
+        width: 100%
+    }
+    &__title-block {
+        padding: 92px 17px;
+        max-width: 40%;
+        z-index: 1;
+    }
+    &__logo-img {
+        position: absolute;
+    }
+    &_hidden {
+        display: none;
+    }
+    picture {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .banner-logo-slide {
+        &__logo-img {
+            width: 636px;
+            height: 489px;
+            bottom: -28px;
+            right: 100px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .banner-logo-slide {
+        &__logo-img {
+            min-width: 385px;
+            min-height: 286px;
+            width: 50vw;
+            position: absolute;
+            bottom: -11px;
+            right: 8px;
+        }
+        &__title-block {
+            max-width: 50%;
+            h1 {
+                font-size: 40px;
+                line-height: 49px;
+                min-width: 400px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-logo-slide {
+        &__logo-img {
+            min-width: 292px;
+            min-height: 226px;
+            position: absolute;
+            bottom: -1px;
+            right: 0px;
+            width: 78vw;
+            max-width: 385px;
+        }
+        &__title-block {
+            // max-width: 95%;
+            padding: 80px 0 80px 20px;
+            min-width: 50%;
+            // width: 400px;
+            h1 {
+                font-size: 36px;
+                line-height: 44px;
+                width: 280px;             
+            }
+        }
+    }
+}

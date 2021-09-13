@@ -229,16 +229,20 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
     &__label {
         display: block;
         background: url(../../static/images/checkbox.svg) no-repeat 0 0;
-        cursor: pointer;
-        &:hover {
-            text-decoration: underline;
-        }
     }
+    & input[type="checkbox"]:not([disabled]) + &__label {
+        cursor: pointer;
+    }
+
     & input[type="checkbox"]:checked + &__label {
         background: url(../../static/images/checkbox-checked.svg) no-repeat 0 0;
     }
     & input[type="checkbox"]:disabled + &__label {
         background: url(../../static/images/checkbox-disabled.svg) no-repeat 0 0;
+        color: #908484
+    }
+    & input[type="checkbox"]:not([disabled]):hover + &__label {
+        text-decoration: underline;
     }
 }
 
@@ -290,16 +294,19 @@ $track-color-upper: rgba(0, 0, 0, 0.5);
     &__label {
         display: block;
         background: url(../../static/images/radio.svg) no-repeat 0 0;
+    }
+    & input[type="radio"]:not([disabled]) + &__label {
         cursor: pointer;
-        &:hover {
-            text-decoration: underline;
-        }
     }
     & input[type="radio"]:checked + &__label {
         background: url(../../static/images/radio-checked.svg) no-repeat 0 0;
     }
     & input[type="radio"]:disabled + &__label {
         background: url(../../static/images/radio-disabled.svg) no-repeat 0 0;
+        color: #908484
+    }
+    & input[type="radio"]:not([disabled]):hover + &__label {
+        text-decoration: underline;
     }
 }
 
