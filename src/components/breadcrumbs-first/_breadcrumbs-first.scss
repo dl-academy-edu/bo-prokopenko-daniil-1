@@ -19,6 +19,9 @@
             content: url(static/images/arrow-divider.svg);
             margin: 0 21px;
         }
+        a {
+            transition: 0.4s;
+        }
         a:hover {
             opacity: 0.5;
         }
