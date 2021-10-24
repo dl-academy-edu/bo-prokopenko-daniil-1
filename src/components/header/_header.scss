@@ -215,7 +215,7 @@ $active-opacity: 20%;
 @media screen and (max-width: 767px) {
     .header {
         &__wrapper {
-            padding: 10px 30px;
+            padding: 10px 0;
             justify-content: space-between;            
         }
         &__logo {
